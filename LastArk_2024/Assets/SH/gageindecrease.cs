@@ -10,7 +10,7 @@ public class gageindecrease : MonoBehaviour
     public static float 인구게이지증감 = 0;
     public static float 식량게이지증감 = 0;
     public static float 침식도게이지증감 = 0;
-
+    public static bool flag = false;
    
 
 
@@ -29,9 +29,9 @@ public class gageindecrease : MonoBehaviour
     }
     void Update()
     {
-        updategagenum();
-       
+        통합함수();
     }
+   
     // Update is called once per frame
     /*void Update()
     {
@@ -42,27 +42,28 @@ public class gageindecrease : MonoBehaviour
         
         
     }*/
-    /*IEnumerator gageinde()
+    public void 통합함수()
     {
-        Debug.Log("코루틴실행시작");
-       
+        if (flag == true)
+        {
+            updategagenum();
+            Invoke("resetgage", 2f);
            
-        yield return new WaitForSeconds(2f);
-        resetgage();
-        Debug.Log("코루틴실행중");
-
-        
+            
+        }
     }
-    
+   
 
     public void resetgage()
     {
-        희망게이지증감 = 0;
-        인구게이지증감 = 0;
-        식량게이지증감 = 0;
-        침식도게이지증감 = 0; 
+        희망게이지증감량.text = " ";
+        인구게이지증감량.text = " ";
+        식량게이지증감량.text = " ";
+        침식도게이지증감량.text = " ";
+        flag = false;
+      
     }
-    */
+    
   
  
     public void updategagenum()
@@ -73,6 +74,7 @@ public class gageindecrease : MonoBehaviour
         }
         else
         {
+           
             if (희망게이지증감 > 0)
             {
                 희망게이지증감량.text = " +" + 희망게이지증감.ToString();
@@ -91,6 +93,7 @@ public class gageindecrease : MonoBehaviour
         }
         else
         {
+            
             if (인구게이지증감 > 0)
             {
                 인구게이지증감량.text = " +" + 인구게이지증감.ToString();
@@ -107,6 +110,7 @@ public class gageindecrease : MonoBehaviour
         }
         else
         {
+            
             if (식량게이지증감 > 0)
             {
                 식량게이지증감량.text = " +" + 식량게이지증감.ToString();
@@ -123,6 +127,7 @@ public class gageindecrease : MonoBehaviour
         }
         else
         {
+            
             if (침식도게이지증감 > 0)
             {
                 침식도게이지증감량.text = " +" + 침식도게이지증감.ToString();
@@ -165,6 +170,7 @@ public class gageindecrease : MonoBehaviour
             침식도게이지증감 = much;
           
         }
+        flag = true;
         
     }
 }
