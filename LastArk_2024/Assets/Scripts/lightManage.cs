@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class lightManage : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class lightManage : MonoBehaviour
 
     void Start()
     {
-        windowLight.enabled = false;
-        directLight.enabled = false;
-        darkLight.enabled = false;
+        windowLight.enabled = true;
+        directLight.enabled = true;
+        darkLight.enabled = true;
         particle.SetActive(false);
     }
 
@@ -24,24 +25,38 @@ public class lightManage : MonoBehaviour
     {
         if(UI.현침식도 <= 40)
         {
-            windowLight.enabled = true;
-            directLight.enabled = true;
+            windowLight.DOFade(0.1f, 4.0f);
+            directLight.DOFade(0.14f, 4.0f);
             particle.SetActive(true);
             darkLight.enabled = false;
         }
         else if((UI.현침식도 > 40) &&(UI.현침식도 <= 60))
         {
-            windowLight.enabled = false;
-            directLight.enabled = false;
+            windowLight.DOFade(0f, 4.0f);
+            directLight.DOFade(0f, 4.0f);
             particle.SetActive(false);
-            darkLight.enabled = false;
+            darkLight.DOFade(0f, 4.0f);
         }
         else if((UI.현침식도 > 60) && (UI.현침식도 <= 80))
         {
-            windowLight.enabled = false;
-            directLight.enabled = false;
+            windowLight.DOFade(0f, 4.0f);
+            directLight.DOFade(0f, 4.0f);
             particle.SetActive(false);
-            darkLight.enabled = true;
+            darkLight.DOFade(0.5f, 4.0f);
+        }
+        else if ((UI.현침식도 > 80) && (UI.현침식도 <= 90))
+        {
+            windowLight.DOFade(0f, 4.0f);
+            directLight.DOFade(0f, 4.0f);
+            particle.SetActive(false);
+            darkLight.DOFade(0.7f, 4.0f);
+        }
+        else
+        {
+            windowLight.DOFade(0f, 4.0f);
+            directLight.DOFade(0f, 4.0f);
+            particle.SetActive(false);
+            darkLight.DOFade(0.8f, 4.0f);
         }
     }
 }
