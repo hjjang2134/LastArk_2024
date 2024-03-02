@@ -798,6 +798,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!1 &206740324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1128,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272602392}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.20086764, w: 0.9796184}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1153,10 +1155,10 @@ RectTransform:
   - {fileID: 1927166312}
   m_Father: {fileID: 373712516}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.175}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 640, y: 35.100002}
+  m_AnchoredPosition: {x: 591, y: -219}
   m_SizeDelta: {x: 400, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272602394
@@ -1247,6 +1249,7 @@ MonoBehaviour:
   i18: {fileID: 855419408}
   i19: {fileID: 1078000326}
   i20: {fileID: 1927166311}
+  ne: {fileID: 0}
 --- !u!114 &272602398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scinfo1: {fileID: 31974232}
   "\uC815\uBB34\uB9C8\uCE58\uAE30\uBC84\uD2BC": {fileID: 1487611565}
+  "\uD2B9\uBCC4\uC0C1\uC18C\uBB38\uD45C\uC2DC": {fileID: 0}
 --- !u!1 &285563793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1353,7 @@ GameObject:
   - component: {fileID: 305639819}
   - component: {fileID: 305639818}
   m_Layer: 5
-  m_Name: Image
+  m_Name: light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1609,7 +1613,6 @@ RectTransform:
   - {fileID: 1688142736}
   - {fileID: 1409404735}
   - {fileID: 1568326929}
-  - {fileID: 305639817}
   - {fileID: 171960454}
   - {fileID: 1135959143}
   - {fileID: 726328063}
@@ -1625,6 +1628,7 @@ RectTransform:
   - {fileID: 160866728}
   - {fileID: 434450465}
   - {fileID: 1522645793}
+  - {fileID: 305639817}
   - {fileID: 809942770}
   - {fileID: 1841439615}
   m_Father: {fileID: 0}
@@ -2405,6 +2409,7 @@ GameObject:
   - component: {fileID: 572156876}
   - component: {fileID: 572156875}
   - component: {fileID: 572156874}
+  - component: {fileID: 572156877}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -2486,6 +2491,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572156877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572156873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &613381530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,6 +2581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scinfo1: {fileID: 31974232}
   "\uC815\uBB34\uB9C8\uCE58\uAE30\uBC84\uD2BC": {fileID: 1487611565}
+  "\uD2B9\uBCC4\uC0C1\uC18C\uBB38\uD45C\uC2DC": {fileID: 0}
 --- !u!1 &615566714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &726328063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2999,6 +3049,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!1 &747792831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3298,7 +3350,7 @@ GameObject:
   - component: {fileID: 809942772}
   - component: {fileID: 809942771}
   m_Layer: 5
-  m_Name: Image
+  m_Name: light2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3419,6 +3471,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!114 &812032813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4886,6 +4940,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!114 &1135959145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5624,6 +5680,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 1403632853}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!114 &1403632852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6474,6 +6532,8 @@ MonoBehaviour:
   acceptimg: {fileID: 615566714}
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 1451696059}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
+  isStamp: 1
 --- !u!114 &1451696058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13287,7 +13347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 3, y: 0}
   m_SizeDelta: {x: 400, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927166313
