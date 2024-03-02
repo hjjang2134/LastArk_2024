@@ -11,6 +11,7 @@ public class Click : MonoBehaviour
     public RectTransform stampPanel, scriptPanel1;
     public GameObject acceptimg, ignoreimg;
     public AudioSource stampsound;
+    public bool isStamp = true;
     private void Start()
     {
         ignoreimg.SetActive(false);
@@ -22,20 +23,18 @@ public class Click : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Accept"))
         {
-            if (gameObject.tag.Equals("acceptstamp"))    // ¼ö¶ô
+            if (isStamp && gameObject.tag.Equals("acceptstamp"))    // ï¿½ï¿½ï¿½ï¿½
             {
-                print("¼ö¶ô!");
+                isStamp = false;
                 acceptimg.SetActive(true);
-                Clipboard.¼ö¶ô();
-
+                Clipboard.ï¿½ï¿½ï¿½ï¿½();
             }
 
-            if (gameObject.tag.Equals("ignorestamp"))    // °ÅÀý
+            if (isStamp && gameObject.tag.Equals("ignorestamp"))    // ï¿½ï¿½ï¿½ï¿½
             {
-                print("°ÅÀý");
+                isStamp = false;
                 ignoreimg.SetActive(true);
-                Clipboard.°ÅÀý();
-                
+                Clipboard.ï¿½ï¿½ï¿½ï¿½();
             }
             stampsound.Play();
 
@@ -58,6 +57,7 @@ public class Click : MonoBehaviour
 
     void Back1()
     {
+        isStamp = true;
         scriptPanel1.localPosition = new Vector2(70, -347);
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);

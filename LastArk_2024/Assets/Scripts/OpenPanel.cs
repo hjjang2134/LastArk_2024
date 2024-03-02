@@ -53,7 +53,13 @@ public class OpenPanel : MonoBehaviour
         else if (panelName == "Script")
         {
             scriptin.Play();
-            scriptPanel.DOLocalMoveY(20, 2f).SetEase(Ease.OutBack);
+
+            if(scriptPanel.localPosition.y == -347){
+                scriptPanel.DOLocalMoveY(20, 2f).SetEase(Ease.OutBack);
+            }
         }
+    }
+    public void StampBack(){
+        stampPanel.DOLocalMoveX(578, 1f).SetEase(Ease.InBack);
     }
 }

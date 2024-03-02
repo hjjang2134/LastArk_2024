@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class 뉴스 : MonoBehaviour
 {
-    public GameObject i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20;
+    public GameObject i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, new;
     private void Start()
     {
         i1.SetActive(false);
@@ -28,6 +28,7 @@ public class 뉴스 : MonoBehaviour
         i18.SetActive(false);
         i19.SetActive(false);
         i20.SetActive(false);
+        new.SetActive(false);
     }
     public void Update()
     {
@@ -155,6 +156,7 @@ public class 뉴스 : MonoBehaviour
 
     public void Hide()
     {
+        new.SetActive(true);
         i1.SetActive(false);
         i2.SetActive(false);
         i3.SetActive(false);
