@@ -11,6 +11,7 @@ public class Click : MonoBehaviour
     public RectTransform stampPanel, scriptPanel1;
     public GameObject acceptimg, ignoreimg;
     public AudioSource stampsound;
+    public GameObject 특상표시;
     public bool isStamp = true;
     private void Start()
     {
@@ -28,6 +29,7 @@ public class Click : MonoBehaviour
                 isStamp = false;
                 acceptimg.SetActive(true);
                 Clipboard.수락();
+                특상표시.SetActive(false);
             }
 
             if (isStamp && gameObject.tag.Equals("ignorestamp"))    // ����
@@ -35,6 +37,7 @@ public class Click : MonoBehaviour
                 isStamp = false;
                 ignoreimg.SetActive(true);
                 Clipboard.거절();
+                특상표시.SetActive(false);
             }
             stampsound.Play();
 

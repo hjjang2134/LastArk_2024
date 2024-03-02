@@ -63,6 +63,8 @@ public class gageindecrease : MonoBehaviour
         침식도게이지증감 = 0; 
     }
     */
+  
+ 
     public void updategagenum()
     {
         if (희망게이지증감 == 0)
@@ -78,6 +80,7 @@ public class gageindecrease : MonoBehaviour
             else
             {
                 희망게이지증감량.text = 희망게이지증감.ToString();
+               
             }
 
            

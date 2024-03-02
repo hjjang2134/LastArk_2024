@@ -111,6 +111,7 @@ public class Clipboard : MonoBehaviour
     
     public TextMeshProUGUI Scinfo1;
     public GameObject 정무마치기버튼;
+    public GameObject 특별상소문표시; //추가
    
    
 
@@ -130,8 +131,17 @@ public class Clipboard : MonoBehaviour
     {
 
         정무마치기버튼.SetActive(true);
+        특별상소문표시.SetActive(false); //추가
         
 
+    }
+    private void update()
+    {
+        if (B==2)
+        {
+            특별상소문표시.SetActive(true);
+            Debug.Log("특상표시2");
+        }
     }
 
 
@@ -210,11 +220,15 @@ public class Clipboard : MonoBehaviour
             Scinfo1.text = 스토리내용;
 
         }
-        else
+        else 
         {
+            특별상소문표시.SetActive(true); //추가
             pickup특별상소문(number-200);
             Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
             Scinfo1.text = 상소문내용;
+
+            Debug.Log("특상표시");
+
 
         }
        
@@ -784,7 +798,7 @@ public class Clipboard : MonoBehaviour
 
 
                 }
-
+                
             }
         }
         
