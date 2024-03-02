@@ -129,7 +129,7 @@ public class Clipboard : MonoBehaviour
     private void Start()
     {
 
-        정무마치기버튼.SetActive(false);
+        정무마치기버튼.SetActive(true);
         
 
     }
@@ -965,7 +965,7 @@ public class Clipboard : MonoBehaviour
         }
         else
         {
-            정무마치기버튼.SetActive(false);
+            정무마치기버튼.SetActive(true);//원래 false였음
         }
     }
 }
