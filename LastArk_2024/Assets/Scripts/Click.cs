@@ -27,14 +27,14 @@ public class Click : MonoBehaviour
             {
                 isStamp = false;
                 acceptimg.SetActive(true);
-                Clipboard.����();
+                Clipboard.수락();
             }
 
             if (isStamp && gameObject.tag.Equals("ignorestamp"))    // ����
             {
                 isStamp = false;
                 ignoreimg.SetActive(true);
-                Clipboard.����();
+                Clipboard.거절();
             }
             stampsound.Play();
 
