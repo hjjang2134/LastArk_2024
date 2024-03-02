@@ -82,6 +82,7 @@ public class UI : MonoBehaviour
             }
 
         }
+        gageindecrease.updategage(which, much);
 
 
 
