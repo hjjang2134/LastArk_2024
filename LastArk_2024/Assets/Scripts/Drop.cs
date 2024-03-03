@@ -4,23 +4,30 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler     // µµÀå
+public class Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler     // ï¿½ï¿½ï¿½ï¿½
 {
-    public static Vector2 DefaultPos;   // µ¹¾Æ¿Ã À§Ä¡
+    public static Vector2 DefaultPos;   // ï¿½ï¿½ï¿½Æ¿ï¿½ ï¿½ï¿½Ä¡
 
-    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)  // µå·¡±× ½ÃÀÛ
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)  // ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         DefaultPos = this.transform.position;
     }
-    void IDragHandler.OnDrag(PointerEventData eventData)    // µå·¡±× Áß
+    void IDragHandler.OnDrag(PointerEventData eventData)    // ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½
     {
         Vector2 currentPos = eventData.position;
         this.transform.position = currentPos;
     }
 
-    void IEndDragHandler.OnEndDrag(PointerEventData eventData)  // µå·¡±× ³¡
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData)  // ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½
     {
         Invoke("Backto", .2f);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name.Equals("Script")){
+            Invoke("Backto", .2f);
+        }    
     }
 
     void Backto()
