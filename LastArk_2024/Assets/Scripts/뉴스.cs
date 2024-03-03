@@ -183,14 +183,14 @@ public class 뉴스 : MonoBehaviour
         
         if(isOpen){ // 뉴스를 열어봤나?
             Debug.Log("들어왓나");
-            ne.SetActive(false);
+           // ne.SetActive(false);
             isOpen = false;
         }
     }
 
     public void Hide()
     {
-        ne.SetActive(true);
+       // ne.SetActive(true);
         i1.SetActive(false);
         i2.SetActive(false);
         i3.SetActive(false);
