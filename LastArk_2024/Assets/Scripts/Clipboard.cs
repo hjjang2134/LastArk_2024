@@ -835,14 +835,20 @@ public class Clipboard : MonoBehaviour
         else if ((stagenum == 11) && (main2 == true))
         {
             go_ScriptScene();
-            시간석2 = false;
-            깬시간석2 = true;
+            //시간석2 = false;
+            //깬시간석2 = true;
         }
         else if ((stagenum == 14) && (main3 == true))
         {
             go_ScriptScene();
-            시간석3 = false;
-            깬시간석3 = true;
+            시간석2 = true;
+            //시간석 = false;
+            //깬시간석3 = true;
+        }
+        else if ((stagenum == 15 )&&(시간석2 ==true))
+        {
+            깬시간석2 = true;
+            시간석2 = false; 
         }
        
         else if (stagenum == 18)
@@ -973,6 +979,10 @@ public class Clipboard : MonoBehaviour
         {
             특별상소문표시.SetActive(false);
         }
+        UI.현희망 = 100;
+        UI.현인구 = 100000;
+        UI.현식량 = 1000;
+        UI.현침식도 = 0;
     }
 
     public void 버튼활성화()
