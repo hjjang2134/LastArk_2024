@@ -17,6 +17,7 @@ public class Click : MonoBehaviour
     public TextMeshProUGUI scriptnum;   // 상소문 갯수
     private void Start()
     {
+        num = 0;
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
         stampsound = GetComponent<AudioSource>();

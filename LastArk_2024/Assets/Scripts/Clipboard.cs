@@ -932,7 +932,7 @@ public class Clipboard : MonoBehaviour
         스크립트진행함수();
        
         stagenum++;
-        SceneManager.LoadScene("day Scene");
+        
         timecontroller.시간증가();
         UI.gagemechanism();
         상소문count = 0;

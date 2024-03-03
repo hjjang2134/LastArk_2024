@@ -12,6 +12,7 @@ public class OpenPanel : MonoBehaviour
     private void Start()
     {
         scriptin = GetComponent<AudioSource>();
+        
     }
 
     public void PanelBtn(string panelName)
