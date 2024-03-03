@@ -6,6 +6,7 @@ using UnityEngine;
 public class 뉴스 : MonoBehaviour
 {
     public GameObject i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, ne;
+    public static bool isOpen = false;  // 뉴스를 열어봤으면 new 표시 사라짐
     private void Start()
     {
         i1.SetActive(false);
@@ -36,121 +37,154 @@ public class 뉴스 : MonoBehaviour
         {
             Hide();
             i1.SetActive (true);
+            Check();
         }
-        else if (Clipboard.fail150 == true)
+        if (Clipboard.fail150 == true)
         {
             Hide();
             i2.SetActive (true);
+            Check();
         }
-        else if (Clipboard.rej150 == true)
+        if (Clipboard.rej150 == true)
         {
             Hide();
             i3.SetActive (true);
+            Check();
         }
-        else if (Clipboard.suc151 == true)
+        if (Clipboard.suc151 == true)
         {
             Hide();
             i4.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail151 == true)
+        if (Clipboard.fail151 == true)
         {
             Hide();
             i5.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej151 == true)
+        if (Clipboard.rej151 == true)
         {
             Hide();
             i6.SetActive(true);
+            Check();
         }
-        else if (Clipboard.suc152 == true)
+        if (Clipboard.suc152 == true)
         {
             Hide();
             i7.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail152 == true)
+        if (Clipboard.fail152 == true)
         {
             Hide();
             i8.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej152 == true)
+        if (Clipboard.rej152 == true)
         {
             Hide();
             i9.SetActive(true);
+            Check();
         }
-        else if (Clipboard.suc153 == true)
+        if (Clipboard.suc153 == true)
         {
             Hide();
             i10.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail153 == true)
+        if (Clipboard.fail153 == true)
         {
             Hide();
             i11.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej153 == true)
+        if (Clipboard.rej153 == true)
         {
             Hide();
             i11.SetActive(true);
+            Check();
         }
-        else if (Clipboard.suc154 == true)
+        if (Clipboard.suc154 == true)
         {
             Hide();
             i12.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail154 == true)
+        if (Clipboard.fail154 == true)
         {
             Hide();
             i13.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej154 == true)
+        if (Clipboard.rej154 == true)
         {
             Hide();
             i13.SetActive(true);
+            Check();
         }
-        else if (Clipboard.suc155 == true)
+        if (Clipboard.suc155 == true)
         {
             Hide();
             i14.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail155 == true)
+        if (Clipboard.fail155 == true)
         {
             Hide();
             i15.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej155 == true)
+        if (Clipboard.rej155 == true)
         {
             Hide();
             i15.SetActive(true);
+            Check();
         }
-        else if (Clipboard.suc156 == true)
+        if (Clipboard.suc156 == true)
         {
             Hide();
             i16.SetActive(true);
+            Check();
         }
-        else if (Clipboard.fail156 == true)
+        if (Clipboard.fail156 == true)
         {
             Hide();
             i17.SetActive(true);
+            Check();
         }
-        else if (Clipboard.rej156 == true)
+        if (Clipboard.rej156 == true)
         {
             Hide();
             i18.SetActive(true);
+            Check();
         }
-        else if (Clipboard.common1 == true)
+        if (Clipboard.common1 == true)
         {
             Hide();
             i19.SetActive(true);
+            Check();
         }
-        else if (Clipboard.common2 == true)
+        if (Clipboard.common2 == true)
         {
             Hide();
             i20.SetActive(true);
+            Check();
         }
-        else if (Clipboard.common3 == true)
+        if (Clipboard.common3 == true)
         {
             Hide();
             i20.SetActive(true);
+            Check();
+        }
+    }
+
+    public void Check(){
+        Debug.Log("어랑ㄴ?");
+        if(isOpen){ // 뉴스를 열어봤나?
+            Debug.Log("들어왓나");
+            ne.SetActive(false);
+            isOpen = false;
         }
     }
 

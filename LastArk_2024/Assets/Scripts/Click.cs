@@ -41,22 +41,14 @@ public class Click : MonoBehaviour
             }
             stampsound.Play();
 
-            Invoke("Boxback", 1f);
-
             if (other.gameObject.name.Equals("Script"))
             {
                 scriptPanel1.DOLocalMoveY(600, 1f).SetEase(Ease.InBack);
                 Invoke("Back1", 3f);
             }
-
         }
-        
     }
 
-    void Boxback()
-    {
-        stampPanel.DOLocalMoveX(578, 1f).SetEase(Ease.InBack);
-    }
 
     void Back1()
     {
