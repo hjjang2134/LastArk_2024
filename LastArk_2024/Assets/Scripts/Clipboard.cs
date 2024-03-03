@@ -134,7 +134,7 @@ public class Clipboard : MonoBehaviour
     private void Start()
     {
 
-        정무마치기버튼.SetActive(true);
+        정무마치기버튼.SetActive(false); //false로 잠시 바꿈
         특별상소문표시.SetActive(false); //추가
         
 
@@ -994,7 +994,7 @@ public class Clipboard : MonoBehaviour
         }
         else
         {
-            정무마치기버튼.SetActive(true);//원래 false였음
+            정무마치기버튼.SetActive(false);//원래 false였음
         }
     }
 }
