@@ -1290,6 +1290,7 @@ MonoBehaviour:
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
   isStamp: 1
+  scriptnum: {fileID: 10933386}
 --- !u!1 &206740324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,8 +1974,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.55032, y: -237.54999}
-  m_SizeDelta: {x: 546.6027, y: 129.1}
+  m_AnchoredPosition: {x: 83.12504, y: -242.85002}
+  m_SizeDelta: {x: 573.75, y: 170.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342796627
 MonoBehaviour:
@@ -1995,6 +1996,7 @@ MonoBehaviour:
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
   isStamp: 1
+  scriptnum: {fileID: 10933386}
 --- !u!114 &342796628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,6 +2302,7 @@ RectTransform:
   - {fileID: 1191082552}
   - {fileID: 171960454}
   - {fileID: 1135959143}
+  - {fileID: 2133207528}
   - {fileID: 726328063}
   - {fileID: 1487611566}
   - {fileID: 272602393}
@@ -2323,7 +2326,6 @@ RectTransform:
   - {fileID: 1357901780}
   - {fileID: 72363621}
   - {fileID: 105107784}
-  - {fileID: 2133207528}
   - {fileID: 10933385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -6000,6 +6002,7 @@ MonoBehaviour:
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
   isStamp: 1
+  scriptnum: {fileID: 10933386}
 --- !u!114 &1135959145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6913,6 +6916,7 @@ MonoBehaviour:
   stampsound: {fileID: 1403632853}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
   isStamp: 1
+  scriptnum: {fileID: 10933386}
 --- !u!114 &1403632852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7787,9 +7791,9 @@ GameObject:
   - component: {fileID: 1451696055}
   - component: {fileID: 1451696054}
   - component: {fileID: 1451696053}
-  - component: {fileID: 1451696057}
   - component: {fileID: 1451696058}
   - component: {fileID: 1451696059}
+  - component: {fileID: 1451696060}
   m_Layer: 5
   m_Name: Accept
   m_TagString: acceptstamp
@@ -7927,25 +7931,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451696050}
   m_CullTransparentMesh: 1
---- !u!114 &1451696057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451696050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951835527a3511e45bf4f0a269bfd7f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stampPanel: {fileID: 1837778331}
-  scriptPanel1: {fileID: 1446048290}
-  acceptimg: {fileID: 615566714}
-  ignoreimg: {fileID: 472548417}
-  stampsound: {fileID: 1451696059}
-  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
-  isStamp: 1
 --- !u!114 &1451696058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8054,6 +8039,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1451696060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451696050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951835527a3511e45bf4f0a269bfd7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stampPanel: {fileID: 1837778331}
+  scriptPanel1: {fileID: 1446048290}
+  acceptimg: {fileID: 615566714}
+  ignoreimg: {fileID: 472548417}
+  stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
+  isStamp: 1
+  scriptnum: {fileID: 10933386}
 --- !u!1 &1472031968
 GameObject:
   m_ObjectHideFlags: 0

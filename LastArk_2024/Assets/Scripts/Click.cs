@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
-//using static UnityEditorInternal.ReorderableList;
 
 public class Click : MonoBehaviour
 {
@@ -12,7 +12,9 @@ public class Click : MonoBehaviour
     public GameObject acceptimg, ignoreimg;
     public AudioSource stampsound;
     public GameObject 특상표시;
+    public static int num = 0; // 상소문 갯수
     public bool isStamp = true;
+    public TextMeshProUGUI scriptnum;   // 상소문 갯수
     private void Start()
     {
         ignoreimg.SetActive(false);
@@ -24,7 +26,7 @@ public class Click : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Accept"))
         {
-            if (isStamp && gameObject.tag.Equals("acceptstamp"))    // ����
+            if (gameObject.tag.Equals("acceptstamp"))    // ����
             {
                 isStamp = false;
                 acceptimg.SetActive(true);
@@ -32,7 +34,7 @@ public class Click : MonoBehaviour
                 특상표시.SetActive(false);
             }
 
-            if (isStamp && gameObject.tag.Equals("ignorestamp"))    // ����
+            if (gameObject.tag.Equals("ignorestamp"))    // ����
             {
                 isStamp = false;
                 ignoreimg.SetActive(true);
@@ -41,9 +43,14 @@ public class Click : MonoBehaviour
             }
             stampsound.Play();
 
-            if (other.gameObject.name.Equals("Script"))
+            if (other.gameObject.name.Equals("Script")) // 상소문 처리
             {
-                scriptPanel1.DOLocalMoveY(600, 1f).SetEase(Ease.InBack);
+                scriptPanel1.DOLocalMoveY(600, 1f).SetEase(Ease.InBack);             
+            }
+
+            num++;
+            scriptnum.text = num + "/8";
+            if(num <= 7){
                 Invoke("Back1", 3f);
             }
         }
