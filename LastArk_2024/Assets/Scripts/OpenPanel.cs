@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class OpenPanel : MonoBehaviour
 {
-    public RectTransform newsPanel, rockPanel, stampPanel, scriptPanel, Panel;
+    public RectTransform newsPanel, rockPanel, stampPanel, scriptPanel;
     public AudioSource scriptin;
 
     private void Start()
@@ -18,11 +18,12 @@ public class OpenPanel : MonoBehaviour
     {
         if (panelName == "News")
         {
-            if (newsPanel.localPosition.x == 640)
+            if (newsPanel.localPosition.x == 640)   // 뉴스 열기
             {
+                뉴스.isOpen = true;
                 newsPanel.DOLocalMoveX(70, 2f).SetEase(Ease.OutBack);
             }
-            else if (newsPanel.localPosition.x == 70)
+            else if (newsPanel.localPosition.x == 70)   // 뉴스 닫기
             {
                 newsPanel.DOLocalMoveX(640, 2f).SetEase(Ease.InBack);
             }
@@ -45,10 +46,10 @@ public class OpenPanel : MonoBehaviour
            stampPanel.DOLocalMoveX(323, 1f).SetEase(Ease.OutBack);
         }
 
-        else if (panelName == "Quit")
+        /*else if (panelName == "Quit")
         {
             Panel.DOLocalMoveX(742, 2f).SetEase(Ease.InBack);
-        }
+        }*/
 
         else if (panelName == "Script")
         {
