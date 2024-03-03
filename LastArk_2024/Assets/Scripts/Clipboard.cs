@@ -930,7 +930,9 @@ public class Clipboard : MonoBehaviour
     {
 
         스크립트진행함수();
+       
         stagenum++;
+        SceneManager.LoadScene("day Scene");
         timecontroller.시간증가();
         UI.gagemechanism();
         상소문count = 0;
@@ -939,6 +941,7 @@ public class Clipboard : MonoBehaviour
         {
             print(dailySSM[i]);
         }
+      
 
         suc150 = false;
         fail150 = false;
@@ -970,19 +973,16 @@ public class Clipboard : MonoBehaviour
     {
         Invoke("버튼활성화", 3f);
         엔딩조건();
-        Debug.Log(B);
-        if (B==2)
+       
+        /* if (B==2)
         {
             특별상소문표시.SetActive(true);
-        }
+        } 
         else
         {
             특별상소문표시.SetActive(false);
-        }
-        UI.현희망 = 100;
-        UI.현인구 = 100000;
-        UI.현식량 = 1000;
-        UI.현침식도 = 0;
+        } */
+        
     }
 
     public void 버튼활성화()
