@@ -29,7 +29,7 @@ public class Click : MonoBehaviour
                 isStamp = false;
                 acceptimg.SetActive(true);
                 Clipboard.수락();
-                특상표시.SetActive(false);
+                Clipboard.resetB();
             }
 
             if (isStamp && gameObject.tag.Equals("ignorestamp"))    // ����
@@ -37,7 +37,8 @@ public class Click : MonoBehaviour
                 isStamp = false;
                 ignoreimg.SetActive(true);
                 Clipboard.거절();
-                특상표시.SetActive(false);
+
+                Clipboard.resetB();
             }
             stampsound.Play();
 

@@ -122,11 +122,15 @@ public class Clipboard : MonoBehaviour
     //public static float 실패확률 = 100 - UI.현희망;
     public static float 실패확률 = 0;
     public static int A ; // 성공 or 실패 확률 구분 
-    public static int B; //특별상소문 일반상소문 구분 일반상소문일 경우 1, 특별상소문은 2, 스토리 상소문일 경우 3
+    public static int B = 0; //특별상소문 일반상소문 구분 일반상소문일 경우 1, 특별상소문은 2, 스토리 상소문일 경우 3
     public static float 게이지; // 불러올게이지
    
 
 
+    public static void resetB()
+    {
+        B = 0;
+    }
     private void Start()
     {
 
@@ -135,14 +139,7 @@ public class Clipboard : MonoBehaviour
         
 
     }
-    private void update()
-    {
-        if (B==2)
-        {
-            특별상소문표시.SetActive(true);
-            Debug.Log("특상표시2");
-        }
-    }
+   
 
 
     public void 테스트함수()
@@ -222,12 +219,12 @@ public class Clipboard : MonoBehaviour
         }
         else 
         {
-            특별상소문표시.SetActive(true); //추가
+            
             pickup특별상소문(number-200);
             Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
             Scinfo1.text = 상소문내용;
 
-            Debug.Log("특상표시");
+          
 
 
         }
@@ -967,7 +964,15 @@ public class Clipboard : MonoBehaviour
     {
         Invoke("버튼활성화", 3f);
         엔딩조건();
-
+        Debug.Log(B);
+        if (B==2)
+        {
+            특별상소문표시.SetActive(true);
+        }
+        else
+        {
+            특별상소문표시.SetActive(false);
+        }
     }
 
     public void 버튼활성화()
