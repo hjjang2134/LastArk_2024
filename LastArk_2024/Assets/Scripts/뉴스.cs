@@ -180,7 +180,7 @@ public class 뉴스 : MonoBehaviour
     }
 
     public void Check(){
-        Debug.Log("어랑ㄴ?");
+        
         if(isOpen){ // 뉴스를 열어봤나?
             Debug.Log("들어왓나");
             ne.SetActive(false);
