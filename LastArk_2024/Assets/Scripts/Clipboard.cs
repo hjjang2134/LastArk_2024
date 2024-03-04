@@ -17,36 +17,35 @@ using JetBrains.Annotations;
 
 public class Clipboard : MonoBehaviour 
 {
-   
-    public static int stagenum=1; // stage °ü¸®ÇÒ º¯¼ö 
+     public static int stagenum=1; // stage ê´€ë¦¬í•  ë³€ìˆ˜ 
 
-    public static int »ó¼Ò¹®count=0; // »ó¼Ò¹®°³¼ö °ü¸®ÇÒ º¯¼ö 
+    public static int ìƒì†Œë¬¸count=0; // ìƒì†Œë¬¸ê°œìˆ˜ ê´€ë¦¬í•  ë³€ìˆ˜ 
 
-    public static string »ó¼Ò¹®³»¿ë;
-    public static int »ó¼Ò¹®·¹º§;
-    public static float ÃÖ¼Ò ;
-    public static float ÃÖ´ë;
-    public static int °ÔÀÌÁö±¸ºĞ;
-    public static float ¼º°ø½ÃÄ§½Äµµ;
-    public static float ¼º°ø½ÃÈñ¸Á;
-    public static float ¼º°ø½Ã½Ä·®;
-    public static float ¼º°ø½ÃÀÎ±¸;
-    public static float ½ÇÆĞ½ÃÄ§½Äµµ;
-    public static float ½ÇÆĞ½ÃÈñ¸Á;
-    public static float ½ÇÆĞ½Ã½Ä·®;
-    public static float ½ÇÆĞ½ÃÀÎ±¸;
-    public static float °ÅÀı½ÃÈñ¸Á;
-    public static float °ÅÀı½Ã½Ä·®;
-    public static float °ÅÀı½ÃÄ§½Äµµ;
-    public static float °ÅÀı½ÃÀÎ±¸;
+    public static string ìƒì†Œë¬¸ë‚´ìš©;
+    public static int ìƒì†Œë¬¸ë ˆë²¨;
+    public static float ìµœì†Œ ;
+    public static float ìµœëŒ€;
+    public static int ê²Œì´ì§€êµ¬ë¶„;
+    public static float ì„±ê³µì‹œì¹¨ì‹ë„;
+    public static float ì„±ê³µì‹œí¬ë§;
+    public static float ì„±ê³µì‹œì‹ëŸ‰;
+    public static float ì„±ê³µì‹œì¸êµ¬;
+    public static float ì‹¤íŒ¨ì‹œì¹¨ì‹ë„;
+    public static float ì‹¤íŒ¨ì‹œí¬ë§;
+    public static float ì‹¤íŒ¨ì‹œì‹ëŸ‰;
+    public static float ì‹¤íŒ¨ì‹œì¸êµ¬;
+    public static float ê±°ì ˆì‹œí¬ë§;
+    public static float ê±°ì ˆì‹œì‹ëŸ‰;
+    public static float ê±°ì ˆì‹œì¹¨ì‹ë„;
+    public static float ê±°ì ˆì‹œì¸êµ¬;
 
-    //½ºÅä¸® »ó¼Ò¹® 
+    //ìŠ¤í† ë¦¬ ìƒì†Œë¬¸ 
  
-    public static string ½ºÅä¸®Å¸ÀÌÆ²;
-    public static string ½ºÅä¸®³»¿ë;
-    public static string ¼º°ø½ÃÄÚ¸àÆ®;
-    public static string ½ÇÆĞ½ÃÄÚ¸àÆ®;
-    public static string °ÅÀı½ÃÄÚ¸àÆ®;
+    public static string ìŠ¤í† ë¦¬íƒ€ì´í‹€;
+    public static string ìŠ¤í† ë¦¬ë‚´ìš©;
+    public static string ì„±ê³µì‹œì½”ë©˜íŠ¸;
+    public static string ì‹¤íŒ¨ì‹œì½”ë©˜íŠ¸;
+    public static string ê±°ì ˆì‹œì½”ë©˜íŠ¸;
     public static int num;
     public static bool Sub1=false;
     public static bool main1 = false;
@@ -56,14 +55,14 @@ public class Clipboard : MonoBehaviour
     public static bool main4_1 = false;
     public static bool RayAlive = true;
     public static bool EugeneAlive = true;
-    public static bool ½Ã°£¼®1 = false;
-    public static bool ½Ã°£¼®2 = false;
-    public static bool ½Ã°£¼®3 = false;
-    public static bool ±ü½Ã°£¼®1 = false;
-    public static bool ±ü½Ã°£¼®2 = false;
-    public static bool ±ü½Ã°£¼®3 = false;
+    public static bool ì‹œê°„ì„1 = false;
+    public static bool ì‹œê°„ì„2 = false;
+    public static bool ì‹œê°„ì„3 = false;
+    public static bool ê¹¬ì‹œê°„ì„1 = false;
+    public static bool ê¹¬ì‹œê°„ì„2 = false;
+    public static bool ê¹¬ì‹œê°„ì„3 = false;
 
-    // ´º½º ÇÃ·¡±×
+    // ë‰´ìŠ¤ í”Œë˜ê·¸
     public static bool suc150 = false;
     public static bool fail150 = false;
     public static bool rej150 = false;
@@ -88,10 +87,10 @@ public class Clipboard : MonoBehaviour
     public static bool common1 = false;
     public static bool common2 = false;
     public static bool common3 = false;
-    public static bool Ä§½Äµµ¿£µù = false;
-    public static bool ÀÎ±¸¿£µù = false;
-    public static bool ½Ä·®¿£µù = false;
-    public static bool ½ºÅ©¸³Æ®flag = false; 
+    public static bool ì¹¨ì‹ë„ì—”ë”© = false;
+    public static bool ì¸êµ¬ì—”ë”© = false;
+    public static bool ì‹ëŸ‰ì—”ë”© = false;
+    public static bool ìŠ¤í¬ë¦½íŠ¸flag = false; 
     
 
 
@@ -102,7 +101,7 @@ public class Clipboard : MonoBehaviour
     public static List<int> specialSSM = new List<int>();
     public static List<int> storySSM = new List<int>();
     public static List<int> dailySSM = new List<int>();
-    public static List<int> Á¶°Ç»ó¼Ò¹® = new List<int>();
+    public static List<int> ì¡°ê±´ìƒì†Œë¬¸ = new List<int>();
 
 
     public static int maxNum;
@@ -111,8 +110,8 @@ public class Clipboard : MonoBehaviour
     public static bool isExit;
     
     public TextMeshProUGUI Scinfo1;
-    public GameObject Á¤¹«¸¶Ä¡±â¹öÆ°;
-    public GameObject Æ¯º°»ó¼Ò¹®Ç¥½Ã; //Ãß°¡
+    public GameObject ì •ë¬´ë§ˆì¹˜ê¸°ë²„íŠ¼;
+    public GameObject íŠ¹ë³„ìƒì†Œë¬¸í‘œì‹œ; //ì¶”ê°€
    
    
 
@@ -120,11 +119,11 @@ public class Clipboard : MonoBehaviour
 
 
 
-    //public static float ½ÇÆĞÈ®·ü = 100 - UI.ÇöÈñ¸Á;
-    public static float ½ÇÆĞÈ®·ü = 0;
-    public static int A ; // ¼º°ø or ½ÇÆĞ È®·ü ±¸ºĞ 
-    public static int B = 0; //Æ¯º°»ó¼Ò¹® ÀÏ¹İ»ó¼Ò¹® ±¸ºĞ ÀÏ¹İ»ó¼Ò¹®ÀÏ °æ¿ì 1, Æ¯º°»ó¼Ò¹®Àº 2, ½ºÅä¸® »ó¼Ò¹®ÀÏ °æ¿ì 3
-    public static float °ÔÀÌÁö; // ºÒ·¯¿Ã°ÔÀÌÁö
+    //public static float ì‹¤íŒ¨í™•ë¥  = 100 - UI.í˜„í¬ë§;
+    public static float ì‹¤íŒ¨í™•ë¥  = 0;
+    public static int A ; // ì„±ê³µ or ì‹¤íŒ¨ í™•ë¥  êµ¬ë¶„ 
+    public static int B = 0; //íŠ¹ë³„ìƒì†Œë¬¸ ì¼ë°˜ìƒì†Œë¬¸ êµ¬ë¶„ ì¼ë°˜ìƒì†Œë¬¸ì¼ ê²½ìš° 1, íŠ¹ë³„ìƒì†Œë¬¸ì€ 2, ìŠ¤í† ë¦¬ ìƒì†Œë¬¸ì¼ ê²½ìš° 3
+    public static float ê²Œì´ì§€; // ë¶ˆëŸ¬ì˜¬ê²Œì´ì§€
    
 
 
@@ -135,25 +134,25 @@ public class Clipboard : MonoBehaviour
     private void Start()
     {
 
-        Á¤¹«¸¶Ä¡±â¹öÆ°.SetActive(false); //false·Î Àá½Ã ¹Ù²Ş
-        Æ¯º°»ó¼Ò¹®Ç¥½Ã.SetActive(false); //Ãß°¡
+        ì •ë¬´ë§ˆì¹˜ê¸°ë²„íŠ¼.SetActive(false); //falseë¡œ ì ì‹œ ë°”ê¿ˆ
+        íŠ¹ë³„ìƒì†Œë¬¸í‘œì‹œ.SetActive(false); //ì¶”ê°€
         
 
     }
    
 
 
-    public void Å×½ºÆ®ÇÔ¼ö()
+    public void í…ŒìŠ¤íŠ¸í•¨ìˆ˜()
     {
-        List<int> Å×½ºÆ®¸®½ºÆ® = new List<int>();
-        Å×½ºÆ®¸®½ºÆ®.Add(0);
-        Å×½ºÆ®¸®½ºÆ®.Add(1);
-        int numbb = Å×½ºÆ®¸®½ºÆ®[»ó¼Ò¹®count];
-        print(»ó¼Ò¹®count);
-        pickup±âº»»ó¼Ò¹®(numbb);
-        print(»ó¼Ò¹®³»¿ë);
+        List<int> í…ŒìŠ¤íŠ¸ë¦¬ìŠ¤íŠ¸ = new List<int>();
+        í…ŒìŠ¤íŠ¸ë¦¬ìŠ¤íŠ¸.Add(0);
+        í…ŒìŠ¤íŠ¸ë¦¬ìŠ¤íŠ¸.Add(1);
+        int numbb = í…ŒìŠ¤íŠ¸ë¦¬ìŠ¤íŠ¸[ìƒì†Œë¬¸count];
+        print(ìƒì†Œë¬¸count);
+        pickupê¸°ë³¸ìƒì†Œë¬¸(numbb);
+        print(ìƒì†Œë¬¸ë‚´ìš©);
         Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
-        Scinfo1.text = »ó¼Ò¹®³»¿ë;
+        Scinfo1.text = ìƒì†Œë¬¸ë‚´ìš©;
        
 
 
@@ -163,22 +162,22 @@ public class Clipboard : MonoBehaviour
 
     }
 
-    public void ¿£µùÁ¶°Ç()
+    public void ì—”ë”©ì¡°ê±´()
     {
-        if (UI.ÇöÄ§½Äµµ >= 100)
+        if (UI.í˜„ì¹¨ì‹ë„ >= 100)
         {
-            Ä§½Äµµ¿£µù = true;
+            ì¹¨ì‹ë„ì—”ë”© = true;
             gobadending();
 
         }
-        else if (UI.ÇöÀÎ±¸ <= 1000)
+        else if (UI.í˜„ì¸êµ¬ <= 1000)
         {
-            ÀÎ±¸¿£µù = true;
+            ì¸êµ¬ì—”ë”© = true;
             gobadending();
         }
-        else if (UI.Çö½Ä·® == 0)
+        else if (UI.í˜„ì‹ëŸ‰ == 0)
         {
-            ½Ä·®¿£µù = true;
+            ì‹ëŸ‰ì—”ë”© = true;
             gobadending();
         }
     }
@@ -197,33 +196,33 @@ public class Clipboard : MonoBehaviour
         SceneManager.LoadScene("GoodEnding");
     }
     
-    public void »ó¼Ò¹®ÅëÇÕÇÔ¼ö() //»ó¼Ò¹® µîÀå½ÃÅ³ ¶§ Àû¿ëÇÒ ÇÔ¼ö
+    public void ìƒì†Œë¬¸í†µí•©í•¨ìˆ˜() //ìƒì†Œë¬¸ ë“±ì¥ì‹œí‚¬ ë•Œ ì ìš©í•  í•¨ìˆ˜
     {
-        int number = dailySSM[»ó¼Ò¹®count];
+        int number = dailySSM[ìƒì†Œë¬¸count];
        
         print(stagenum);
         print(number);
         if (number<=130)
         {
-            pickup±âº»»ó¼Ò¹®(number);
+            pickupê¸°ë³¸ìƒì†Œë¬¸(number);
             Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
-            Scinfo1.text = »ó¼Ò¹®³»¿ë;
+            Scinfo1.text = ìƒì†Œë¬¸ë‚´ìš©;
 
         }
         else if (number >= 150 && number <= 157)
         {
-            pickup½ºÅä¸®»ó¼Ò¹®(number-150);
+            pickupìŠ¤í† ë¦¬ìƒì†Œë¬¸(number-150);
             Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
          
-            Scinfo1.text = ½ºÅä¸®³»¿ë;
+            Scinfo1.text = ìŠ¤í† ë¦¬ë‚´ìš©;
 
         }
         else 
         {
             
-            pickupÆ¯º°»ó¼Ò¹®(number-200);
+            pickupíŠ¹ë³„ìƒì†Œë¬¸(number-200);
             Scinfo1 = GameObject.Find("scriptinfo1").GetComponent<TextMeshProUGUI>();
-            Scinfo1.text = »ó¼Ò¹®³»¿ë;
+            Scinfo1.text = ìƒì†Œë¬¸ë‚´ìš©;
 
           
 
@@ -238,25 +237,25 @@ public class Clipboard : MonoBehaviour
 
     }
 
-  /* void Awake() // ÃÊ±â ÇÑ ¹ø¸¸ ¸®½ºÆ®µé Ã¤¿ì±â
+  /* void Awake() // ì´ˆê¸° í•œ ë²ˆë§Œ ë¦¬ìŠ¤íŠ¸ë“¤ ì±„ìš°ê¸°
     {
        
        
         dailySSM.Clear();
-        for (int i = 0; i < 130; i++) // ÀÏ¹İ»ó¼Ò¹®
+        for (int i = 0; i < 130; i++) // ì¼ë°˜ìƒì†Œë¬¸
         {
             commonSSM.Add(i);
         }
-        for (int i = 0; i < 8; i++) // ½ºÅä¸®»ó¼Ò¹®
+        for (int i = 0; i < 8; i++) // ìŠ¤í† ë¦¬ìƒì†Œë¬¸
         {
             storySSM.Add(i + 150);
         }
-        for (int i= 0; i<=30;i++)// Æ¯º°»ó¼Ò¹®¿¡¼­ µîÀåÁ¶°ÇÀÌ ¾ø´Â »ó¼Ò¹®
+        for (int i= 0; i<=30;i++)// íŠ¹ë³„ìƒì†Œë¬¸ì—ì„œ ë“±ì¥ì¡°ê±´ì´ ì—†ëŠ” ìƒì†Œë¬¸
         {
             specialSSM.Add(i+200);
         }
         
-        µ¥ÀÏ¸®¸®½ºÆ®(); //Ã³À½¿¡ ÇÑ ¹ø »Ì¾ÆÁÜ!
+        ë°ì¼ë¦¬ë¦¬ìŠ¤íŠ¸(); //ì²˜ìŒì— í•œ ë²ˆ ë½‘ì•„ì¤Œ!
 
       
        
@@ -265,21 +264,21 @@ public class Clipboard : MonoBehaviour
 
     }*/
 
-    public static void ¸®½ºÆ®»ı¼º()
+    public static void ë¦¬ìŠ¤íŠ¸ìƒì„±()
     {
-        for (int i = 0; i < 130; i++) // ÀÏ¹İ»ó¼Ò¹®
+        for (int i = 0; i < 130; i++) // ì¼ë°˜ìƒì†Œë¬¸
         {
             commonSSM.Add(i);
         }
-        for (int i = 0; i < 8; i++) // ½ºÅä¸®»ó¼Ò¹®
+        for (int i = 0; i < 8; i++) // ìŠ¤í† ë¦¬ìƒì†Œë¬¸
         {
             storySSM.Add(i + 150);
         }
-        for (int i = 0; i <= 30; i++)// Æ¯º°»ó¼Ò¹®¿¡¼­ µîÀåÁ¶°ÇÀÌ ¾ø´Â »ó¼Ò¹®
+        for (int i = 0; i <= 30; i++)// íŠ¹ë³„ìƒì†Œë¬¸ì—ì„œ ë“±ì¥ì¡°ê±´ì´ ì—†ëŠ” ìƒì†Œë¬¸
         {
             specialSSM.Add(i + 200);
         }
-        µ¥ÀÏ¸®¸®½ºÆ®();
+        ë°ì¼ë¦¬ë¦¬ìŠ¤íŠ¸();
         for (int i = 0; i < dailySSM.Count; i++)
         {
             print(dailySSM[i]);
@@ -302,7 +301,7 @@ public class Clipboard : MonoBehaviour
     }
 
 
-    public static void µ¥ÀÏ¸®¸®½ºÆ®() // ÁÖ¾îÁø »ó¼Ò¹®À» ´Ù Ã³¸®ÇßÀ»½Ã dailyssmÀ» ÃÊ±âÈ­ÇÏ°í »õ·Î ¹Ş¾Æ¿À´Â ÇÔ¼ö 
+    public static void ë°ì¼ë¦¬ë¦¬ìŠ¤íŠ¸() // ì£¼ì–´ì§„ ìƒì†Œë¬¸ì„ ë‹¤ ì²˜ë¦¬í–ˆì„ì‹œ dailyssmì„ ì´ˆê¸°í™”í•˜ê³  ìƒˆë¡œ ë°›ì•„ì˜¤ëŠ” í•¨ìˆ˜ 
     {
         
         dailySSM.Clear();
@@ -321,7 +320,7 @@ public class Clipboard : MonoBehaviour
     }
 
 
-    public static void common() // ÀÏ¹İ»ó¼Ò¹® »Ì´Â ÇÔ¼ö 
+    public static void common() // ì¼ë°˜ìƒì†Œë¬¸ ë½‘ëŠ” í•¨ìˆ˜ 
     {
         System.Random random = new System.Random();
         int maxNum = 51;
@@ -397,7 +396,7 @@ public class Clipboard : MonoBehaviour
         {
             maxNum = 26;
         }
-        if (isExit) // ½ºÅä¸®»ó¼Ò¹®ÀÌ »ÌÇûÀ¸¸é
+        if (isExit) // ìŠ¤í† ë¦¬ìƒì†Œë¬¸ì´ ë½‘í˜”ìœ¼ë©´
         {
             for (int i = 0; i < 6; i++)
             {
@@ -410,7 +409,7 @@ public class Clipboard : MonoBehaviour
 
 
         }
-        else // ¾È »ÌÇûÀ¸¸é
+        else // ì•ˆ ë½‘í˜”ìœ¼ë©´
        
         {
             for (int i = 0; i < 7; i++)
@@ -425,7 +424,7 @@ public class Clipboard : MonoBehaviour
     }
 
 
-    public static void story()//½ºÅä¸®»ó¼Ò¹® »Ì´Â ÇÔ¼ö 
+    public static void story()//ìŠ¤í† ë¦¬ìƒì†Œë¬¸ ë½‘ëŠ” í•¨ìˆ˜ 
     {
         int indexNum = -1;
         isExit = false;
@@ -454,75 +453,75 @@ public class Clipboard : MonoBehaviour
     }
 
    
-    public static void special() //½ºÆä¼È »ó¼Ò¹® »Ì´Â ÇÔ¼ö 
+    public static void special() //ìŠ¤í˜ì…œ ìƒì†Œë¬¸ ë½‘ëŠ” í•¨ìˆ˜ 
     {
 
 
-        if ((100 < UI.Çö½Ä·®)&&(UI.Çö½Ä·®<200))
+        if ((100 < UI.í˜„ì‹ëŸ‰)&&(UI.í˜„ì‹ëŸ‰<200))
         {
             if (find(specialSSM, 200))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(200);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(200);
             }
         }
-        else if ((0 < UI.Çö½Ä·®) && (UI.Çö½Ä·® <= 100))
+        else if ((0 < UI.í˜„ì‹ëŸ‰) && (UI.í˜„ì‹ëŸ‰ <= 100))
         {
             if (find(specialSSM, 201))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(201);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(201);
             }
         }
-        else if ((80 <=  UI.ÇöÄ§½Äµµ) && (UI.ÇöÄ§½Äµµ < 90))
+        else if ((80 <=  UI.í˜„ì¹¨ì‹ë„) && (UI.í˜„ì¹¨ì‹ë„ < 90))
         {
             if (find(specialSSM, 202))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(202);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(202);
             }
         }
-        else if ((90 <= UI.ÇöÄ§½Äµµ) && (UI.ÇöÄ§½Äµµ < 100))
+        else if ((90 <= UI.í˜„ì¹¨ì‹ë„) && (UI.í˜„ì¹¨ì‹ë„ < 100))
         {
             if (find(specialSSM, 203))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(203);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(203);
             }
         }
-        else if ((10000 < UI.ÇöÀÎ±¸) && (UI.ÇöÀÎ±¸ < 15000))
+        else if ((10000 < UI.í˜„ì¸êµ¬) && (UI.í˜„ì¸êµ¬ < 15000))
         {
             if (find(specialSSM,204))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(204);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(204);
             }
             
         }
-        else if (UI.ÇöÀÎ±¸<=10000)
+        else if (UI.í˜„ì¸êµ¬<=10000)
         {
             if (find(specialSSM, 205))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(205);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(205);
             }
         }
         else if (RayAlive==false)
         {
             if (find(specialSSM, 206))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(206);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(206);
             }
         }
         else if (EugeneAlive==false)
         {
             if (find(specialSSM, 207))
             {
-                Á¶°Ç»ó¼Ò¹®.Add(207);
+                ì¡°ê±´ìƒì†Œë¬¸.Add(207);
             }
         }
 
-        if (Á¶°Ç»ó¼Ò¹®.Count>0)
+        if (ì¡°ê±´ìƒì†Œë¬¸.Count>0)
         {
            
-            int rannum = Random.Range(0, (Á¶°Ç»ó¼Ò¹®.Count) - 1);
-            int putin = Á¶°Ç»ó¼Ò¹®[rannum];
+            int rannum = Random.Range(0, (ì¡°ê±´ìƒì†Œë¬¸.Count) - 1);
+            int putin = ì¡°ê±´ìƒì†Œë¬¸[rannum];
             pop(specialSSM, dailySSM, putin-200);
-            Á¶°Ç»ó¼Ò¹®.Clear();
+            ì¡°ê±´ìƒì†Œë¬¸.Clear();
         }
 
         else
@@ -562,91 +561,91 @@ public class Clipboard : MonoBehaviour
 
 
    
-    private void pickup±âº»»ó¼Ò¹®(int i)
+    private void pickupê¸°ë³¸ìƒì†Œë¬¸(int i)
     {
-        List<Dictionary<string, object>> data_Dialog = CSVReader.Read("±âº»»ó¼Ò¹®");
-        »ó¼Ò¹®³»¿ë = data_Dialog[i]["contents"].ToString(); //stringÀ¸·Î
+        List<Dictionary<string, object>> data_Dialog = CSVReader.Read("ê¸°ë³¸ìƒì†Œë¬¸");
+        ìƒì†Œë¬¸ë‚´ìš© = data_Dialog[i]["contents"].ToString(); //stringìœ¼ë¡œ
         string lv = data_Dialog[i]["level"].ToString();
-        »ó¼Ò¹®·¹º§ = int.Parse(lv);
+        ìƒì†Œë¬¸ë ˆë²¨ = int.Parse(lv);
         string appsucfood = data_Dialog[i]["AppFood"].ToString();
-        ¼º°ø½Ã½Ä·® = float.Parse(appsucfood);
+        ì„±ê³µì‹œì‹ëŸ‰ = float.Parse(appsucfood);
         string appsuchuman = data_Dialog[i]["AppHuman"].ToString();
-        ¼º°ø½ÃÀÎ±¸ = float.Parse(appsuchuman);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ì„±ê³µì‹œì¸êµ¬ = float.Parse(appsuchuman);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
         string appsucdark = data_Dialog[i]["AppDark"].ToString();
        
-        ¼º°ø½ÃÄ§½Äµµ = float.Parse(appsucdark);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ì„±ê³µì‹œì¹¨ì‹ë„ = float.Parse(appsucdark);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
         string appsuchope = data_Dialog[i]["AppHope"].ToString();
-        ¼º°ø½ÃÈñ¸Á = float.Parse(appsuchope);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ì„±ê³µì‹œí¬ë§ = float.Parse(appsuchope);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
 
         string rejectfood = data_Dialog[i]["RejectFood"].ToString();
-        °ÅÀı½Ã½Ä·® = float.Parse(rejectfood);
+        ê±°ì ˆì‹œì‹ëŸ‰ = float.Parse(rejectfood);
         string rejecthuman = data_Dialog[i]["RejectHuman"].ToString();
-        °ÅÀı½ÃÀÎ±¸ = float.Parse(rejecthuman);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ê±°ì ˆì‹œì¸êµ¬ = float.Parse(rejecthuman);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
         string rejectdark = data_Dialog[i]["RejectDark"].ToString();
-        °ÅÀı½ÃÄ§½Äµµ = float.Parse(rejectdark);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ê±°ì ˆì‹œì¹¨ì‹ë„ = float.Parse(rejectdark);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
         string rejecthope = data_Dialog[i]["RejectHope"].ToString();
-        °ÅÀı½ÃÈñ¸Á = float.Parse(rejecthope);//float ÇüÅÂ·Î ¹Ù²Ù±â
+        ê±°ì ˆì‹œí¬ë§ = float.Parse(rejecthope);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
 
-        B = 1; // ÀÏ¹İ»ó¼Ò¹®ÀÌ¶ó´Â ¶æ
+        B = 1; // ì¼ë°˜ìƒì†Œë¬¸ì´ë¼ëŠ” ëœ»
     }
 
 
    
    
 
-    private void pickup½ºÅä¸®»ó¼Ò¹® (int i)
+    private void pickupìŠ¤í† ë¦¬ìƒì†Œë¬¸ (int i)
     {
         B = 3;
         num = i + 150;
-        List<Dictionary<string, object>> data_Dialog = CSVReader.Read("½ºÅä¸®»ó¼Ò¹®");
-        ½ºÅä¸®Å¸ÀÌÆ²= data_Dialog[i]["story"].ToString();
-        ½ºÅä¸®³»¿ë = data_Dialog[i]["content"].ToString();
-        ¼º°ø½ÃÄÚ¸àÆ® = data_Dialog[i]["SucCom"].ToString();
-        ½ÇÆĞ½ÃÄÚ¸àÆ® = data_Dialog[i]["FailCom"].ToString();
-        °ÅÀı½ÃÄÚ¸àÆ® = data_Dialog[i]["RejectCom"].ToString();
+        List<Dictionary<string, object>> data_Dialog = CSVReader.Read("ìŠ¤í† ë¦¬ìƒì†Œë¬¸");
+        ìŠ¤í† ë¦¬íƒ€ì´í‹€= data_Dialog[i]["story"].ToString();
+        ìŠ¤í† ë¦¬ë‚´ìš© = data_Dialog[i]["content"].ToString();
+        ì„±ê³µì‹œì½”ë©˜íŠ¸ = data_Dialog[i]["SucCom"].ToString();
+        ì‹¤íŒ¨ì‹œì½”ë©˜íŠ¸ = data_Dialog[i]["FailCom"].ToString();
+        ê±°ì ˆì‹œì½”ë©˜íŠ¸ = data_Dialog[i]["RejectCom"].ToString();
         
 
     }
 
     
    
-    private void pickupÆ¯º°»ó¼Ò¹®(int i) //Æ¯º°»ó¼Ò¹®ÀÇ
-                                         //°ÔÀÌÁö Á¶°ÇÀ» ºÒ·¯¿À°í °ÔÀÌÁö Á¶°Ç¿¡ ¸ÂÀ¸¸é true¸¦ ¹İÈ¯, ¾Æ´Ï¸é false
-                                         //»ó¼Ò¹® ¼ÅÇÃÀ» µ¹·Á¼­ false ³ª¿À¸é ´Ù½Ã µ¹¸®°í, true°¡ ³ª¿Ã ¶§ ±îÁö µ¹¸®¸é µÉ µí!
+    private void pickupíŠ¹ë³„ìƒì†Œë¬¸(int i) //íŠ¹ë³„ìƒì†Œë¬¸ì˜
+                                         //ê²Œì´ì§€ ì¡°ê±´ì„ ë¶ˆëŸ¬ì˜¤ê³  ê²Œì´ì§€ ì¡°ê±´ì— ë§ìœ¼ë©´ trueë¥¼ ë°˜í™˜, ì•„ë‹ˆë©´ false
+                                         //ìƒì†Œë¬¸ ì…”í”Œì„ ëŒë ¤ì„œ false ë‚˜ì˜¤ë©´ ë‹¤ì‹œ ëŒë¦¬ê³ , trueê°€ ë‚˜ì˜¬ ë•Œ ê¹Œì§€ ëŒë¦¬ë©´ ë  ë“¯!
 
 
 
     {
-            B = 2; // Æ¯º°»ó¼Ò¹®ÀÌ¶ó´Â ¶æ
-            List<Dictionary<string, object>> data_Dialog = CSVReader.Read("Æ¯º°»ó¼Ò¹®");
-            »ó¼Ò¹®³»¿ë = data_Dialog[i]["contents"].ToString();
+            B = 2; // íŠ¹ë³„ìƒì†Œë¬¸ì´ë¼ëŠ” ëœ»
+            List<Dictionary<string, object>> data_Dialog = CSVReader.Read("íŠ¹ë³„ìƒì†Œë¬¸");
+            ìƒì†Œë¬¸ë‚´ìš© = data_Dialog[i]["contents"].ToString();
             string appsucfood = data_Dialog[i]["AppSucFood"].ToString();
-            ¼º°ø½Ã½Ä·® = float.Parse(appsucfood);
+            ì„±ê³µì‹œì‹ëŸ‰ = float.Parse(appsucfood);
             string appsuchuman = data_Dialog[i]["AppSucHuman"].ToString();
-            ¼º°ø½ÃÀÎ±¸ = float.Parse(appsuchuman);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì„±ê³µì‹œì¸êµ¬ = float.Parse(appsuchuman);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string appsucdark = data_Dialog[i]["AppSucDark"].ToString();
-            ¼º°ø½ÃÄ§½Äµµ = float.Parse(appsucdark);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì„±ê³µì‹œì¹¨ì‹ë„ = float.Parse(appsucdark);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string appsuchope = data_Dialog[i]["AppSucHope"].ToString();
-            ¼º°ø½ÃÈñ¸Á = float.Parse(appsuchope);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì„±ê³µì‹œí¬ë§ = float.Parse(appsuchope);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
 
             string appfailfood = data_Dialog[i]["AppFailFood"].ToString();
-            ½ÇÆĞ½Ã½Ä·® = float.Parse(appfailfood);
+            ì‹¤íŒ¨ì‹œì‹ëŸ‰ = float.Parse(appfailfood);
             string appfailhuman = data_Dialog[i]["AppFailHuman"].ToString();
-            ½ÇÆĞ½ÃÀÎ±¸ = float.Parse(appfailhuman);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì‹¤íŒ¨ì‹œì¸êµ¬ = float.Parse(appfailhuman);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string appfaildark = data_Dialog[i]["AppFailDark"].ToString();
-            ½ÇÆĞ½ÃÄ§½Äµµ = float.Parse(appfaildark);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì‹¤íŒ¨ì‹œì¹¨ì‹ë„ = float.Parse(appfaildark);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string appfailhope = data_Dialog[i]["AppFailHope"].ToString();
-            ½ÇÆĞ½ÃÈñ¸Á = float.Parse(appfailhope);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ì‹¤íŒ¨ì‹œí¬ë§ = float.Parse(appfailhope);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
 
 
             string rejectfood = data_Dialog[i]["RejectFood"].ToString();
-            °ÅÀı½Ã½Ä·® = float.Parse(rejectfood);
+            ê±°ì ˆì‹œì‹ëŸ‰ = float.Parse(rejectfood);
             string rejecthuman = data_Dialog[i]["RejectHuman"].ToString();
-            °ÅÀı½ÃÀÎ±¸ = float.Parse(rejecthuman);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ê±°ì ˆì‹œì¸êµ¬ = float.Parse(rejecthuman);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string rejectdark = data_Dialog[i]["RejectDark"].ToString();
-            °ÅÀı½ÃÄ§½Äµµ = float.Parse(rejectdark);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ê±°ì ˆì‹œì¹¨ì‹ë„ = float.Parse(rejectdark);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
             string rejecthope = data_Dialog[i]["RejectHope"].ToString();
-            °ÅÀı½ÃÈñ¸Á = float.Parse(rejecthope);//float ÇüÅÂ·Î ¹Ù²Ù±â
+            ê±°ì ˆì‹œí¬ë§ = float.Parse(rejecthope);//float í˜•íƒœë¡œ ë°”ê¾¸ê¸°
        
            
 
@@ -659,12 +658,12 @@ public class Clipboard : MonoBehaviour
 
 
 
-    public static void ¼ö¶ô() //»ó¼Ò¹® ¼ö¶ô½Ã¿¡ Àû¿ëÇÒ ÇÔ¼ö 
+    public static void ìˆ˜ë½() //ìƒì†Œë¬¸ ìˆ˜ë½ì‹œì— ì ìš©í•  í•¨ìˆ˜ 
     {
         if (B==3)
         {
             A = UnityEngine.Random.Range(0, 100);
-            if ((0 <= A) && (A <= ½ÇÆĞÈ®·ü)) //½ÇÆĞÇÏ¸é
+            if ((0 <= A) && (A <= ì‹¤íŒ¨í™•ë¥ )) //ì‹¤íŒ¨í•˜ë©´
             {
                 if (num == 150)
                 {
@@ -707,7 +706,7 @@ public class Clipboard : MonoBehaviour
                 
             }
 
-            else //¼º°øÇÏ¸é
+            else //ì„±ê³µí•˜ë©´
             {
                
                 
@@ -727,26 +726,26 @@ public class Clipboard : MonoBehaviour
                 else if (num == 152)
                 {
                     main1 = true;
-                    ½Ã°£¼®1 = true;
+                    ì‹œê°„ì„1 = true;
                     suc152 = true;
                 }
                 else if (num == 153)
                 {
                     main2 = true;
-                    ½Ã°£¼®1 = false;
-                    ±ü½Ã°£¼®1 = true;
+                    ì‹œê°„ì„1 = false;
+                    ê¹¬ì‹œê°„ì„1 = true;
                     suc153 = true;
                 }
                 else if (num == 154)
                 {
                     main3 = true;
-                    ½Ã°£¼®2 = true;
+                    ì‹œê°„ì„2 = true;
                     suc154 = true;
                 }
                 else if (num == 155)
                 {
                     main4_1 = true;
-                    ½Ã°£¼®3 = true;
+                    ì‹œê°„ì„3 = true;
                     suc155 = true;
                 }
                 else if (num == 156)
@@ -762,36 +761,36 @@ public class Clipboard : MonoBehaviour
 
         else
         {
-            if (B == 1) // ÀÏ¹İ»ó¼Ò¹®ÀÏ °æ¿ì 
+            if (B == 1) // ì¼ë°˜ìƒì†Œë¬¸ì¼ ê²½ìš° 
             {
-                UI.Handlegage(1, ¼º°ø½ÃÈñ¸Á);
-                UI.Handlegage(2, ¼º°ø½Ã½Ä·®);
-                UI.Handlegage(3, ¼º°ø½ÃÀÎ±¸);
-                UI.Handlegage(4, ¼º°ø½ÃÄ§½Äµµ);
+                UI.Handlegage(1, ì„±ê³µì‹œí¬ë§);
+                UI.Handlegage(2, ì„±ê³µì‹œì‹ëŸ‰);
+                UI.Handlegage(3, ì„±ê³µì‹œì¸êµ¬);
+                UI.Handlegage(4, ì„±ê³µì‹œì¹¨ì‹ë„);
             }
-            else //Æ¯º°»ó¼Ò¹®ÀÏ °æ¿ì  ¼º°ø/ ½ÇÆĞ¸¦ °è»ê 
+            else //íŠ¹ë³„ìƒì†Œë¬¸ì¼ ê²½ìš°  ì„±ê³µ/ ì‹¤íŒ¨ë¥¼ ê³„ì‚° 
             {
 
                 A = UnityEngine.Random.Range(0, 100);
-                if ((0 <= A) && (A <= ½ÇÆĞÈ®·ü))
+                if ((0 <= A) && (A <= ì‹¤íŒ¨í™•ë¥ ))
                 {
 
-                    UI.Handlegage(1, ½ÇÆĞ½ÃÈñ¸Á);
-                    UI.Handlegage(2, ½ÇÆĞ½Ã½Ä·®);
-                    UI.Handlegage(3, ½ÇÆĞ½ÃÀÎ±¸);
-                    UI.Handlegage(4, ½ÇÆĞ½ÃÄ§½Äµµ);
-                    Debug.Log("½ÇÆĞ");
+                    UI.Handlegage(1, ì‹¤íŒ¨ì‹œí¬ë§);
+                    UI.Handlegage(2, ì‹¤íŒ¨ì‹œì‹ëŸ‰);
+                    UI.Handlegage(3, ì‹¤íŒ¨ì‹œì¸êµ¬);
+                    UI.Handlegage(4, ì‹¤íŒ¨ì‹œì¹¨ì‹ë„);
+                    Debug.Log("ì‹¤íŒ¨");
                     common2 = true;
 
                 }
                 else
                 {
 
-                    UI.Handlegage(1, ¼º°ø½ÃÈñ¸Á);
-                    UI.Handlegage(2, ¼º°ø½Ã½Ä·®);
-                    UI.Handlegage(3, ¼º°ø½ÃÀÎ±¸);
-                    UI.Handlegage(4, ¼º°ø½ÃÄ§½Äµµ);
-                    Debug.Log("¼º°ø");
+                    UI.Handlegage(1, ì„±ê³µì‹œí¬ë§);
+                    UI.Handlegage(2, ì„±ê³µì‹œì‹ëŸ‰);
+                    UI.Handlegage(3, ì„±ê³µì‹œì¸êµ¬);
+                    UI.Handlegage(4, ì„±ê³µì‹œì¹¨ì‹ë„);
+                    Debug.Log("ì„±ê³µ");
                     common1 = true;
 
 
@@ -800,9 +799,9 @@ public class Clipboard : MonoBehaviour
             }
         }
         
-        »ó¼Ò¹®count++;
-        print(»ó¼Ò¹®count);
-        Debug.Log(»ó¼Ò¹®count);
+        ìƒì†Œë¬¸count++;
+        print(ìƒì†Œë¬¸count);
+        Debug.Log(ìƒì†Œë¬¸count);
 
 
 
@@ -812,66 +811,66 @@ public class Clipboard : MonoBehaviour
     }
 
 
-    public static void ½ºÅ©¸³Æ®ÁøÇàÇÔ¼ö()
+    public static void ìŠ¤í¬ë¦½íŠ¸ì§„í–‰í•¨ìˆ˜()
     {
         if (stagenum == 1)
 
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
         }
 
         else if (stagenum == 3)
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
         }
 
         else if (stagenum == 6)
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
         }
         else if ((stagenum == 8) && (main1 == true))
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
         }
         else if ((stagenum == 11) && (main2 == true))
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
-            //½Ã°£¼®2 = false;
-            //±ü½Ã°£¼®2 = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
+            //ì‹œê°„ì„2 = false;
+            //ê¹¬ì‹œê°„ì„2 = true;
         }
         else if ((stagenum == 14) && (main3 == true))
         {
             go_ScriptScene();
-            ½ºÅ©¸³Æ®flag = true;
-            ½Ã°£¼®2 = true;
-            //½Ã°£¼® = false;
-            //±ü½Ã°£¼®3 = true;
+            ìŠ¤í¬ë¦½íŠ¸flag = true;
+            ì‹œê°„ì„2 = true;
+            //ì‹œê°„ì„ = false;
+            //ê¹¬ì‹œê°„ì„3 = true;
         }
-        else if ((stagenum == 15 )&&(½Ã°£¼®2 ==true))
+        else if ((stagenum == 15 )&&(ì‹œê°„ì„2 ==true))
         {
-            ±ü½Ã°£¼®2 = true;
-            ½Ã°£¼®2 = false;
-            ½ºÅ©¸³Æ®flag = false;
+            ê¹¬ì‹œê°„ì„2 = true;
+            ì‹œê°„ì„2 = false;
+            ìŠ¤í¬ë¦½íŠ¸flag = false;
         }
        
         else if (stagenum == 18)
         {
-            if ((±ü½Ã°£¼®1==true)&& (±ü½Ã°£¼®2 == true)&& (±ü½Ã°£¼®3 == true)&&(EugeneAlive ==true))
+            if ((ê¹¬ì‹œê°„ì„1==true)&& (ê¹¬ì‹œê°„ì„2 == true)&& (ê¹¬ì‹œê°„ì„3 == true)&&(EugeneAlive ==true))
             {
                 
                 go_ScriptScene();
-                ½ºÅ©¸³Æ®flag = true;
+                ìŠ¤í¬ë¦½íŠ¸flag = true;
             }
             else
             {
                 
                 gogoodending();
-                ½ºÅ©¸³Æ®flag = true;
+                ìŠ¤í¬ë¦½íŠ¸flag = true;
             }
         }
        
@@ -879,7 +878,7 @@ public class Clipboard : MonoBehaviour
     }
 
 
-    public static void °ÅÀı() // °ÅÀı¿¡ µå·¡±× ¾Ø µå·Ó ÇÏ¸é Àû¿ëÇÒ ÇÔ¼ö 
+    public static void ê±°ì ˆ() // ê±°ì ˆì— ë“œë˜ê·¸ ì•¤ ë“œë¡­ í•˜ë©´ ì ìš©í•  í•¨ìˆ˜ 
     {
 
         if (B == 3)
@@ -925,10 +924,10 @@ public class Clipboard : MonoBehaviour
         }
         else
         {
-            UI.Handlegage(1, °ÅÀı½ÃÈñ¸Á);
-            UI.Handlegage(2, °ÅÀı½Ã½Ä·®);
-            UI.Handlegage(3, °ÅÀı½ÃÀÎ±¸);
-            UI.Handlegage(4, °ÅÀı½ÃÄ§½Äµµ);
+            UI.Handlegage(1, ê±°ì ˆì‹œí¬ë§);
+            UI.Handlegage(2, ê±°ì ˆì‹œì‹ëŸ‰);
+            UI.Handlegage(3, ê±°ì ˆì‹œì¸êµ¬);
+            UI.Handlegage(4, ê±°ì ˆì‹œì¹¨ì‹ë„);
             
             if (B==2)
             {   
@@ -936,25 +935,29 @@ public class Clipboard : MonoBehaviour
             }
         
         }
-        »ó¼Ò¹®count++;
-        Debug.Log(»ó¼Ò¹®count);
+        ìƒì†Œë¬¸count++;
+        Debug.Log(ìƒì†Œë¬¸count);
     }
 
-    public void Á¤¹«¸¶Ä¡±â() // Á¤¹«¸¶Ä¡±â¸¦ ´­·¶À» ½Ã ½ºÅ×ÀÌÁö°¡ ³Ñ¾î°¡¸é¼­ ½ºÅ×ÀÌÁö¸¶´Ù ºÎ¿©µÇ´Â °ÔÀÌÁö »ó½Â°ªµéÀÌ ºÎ¿©µÊ. // »ó¼Ò¹® count ¶ÇÇÑ 0À¸·Î ÃÊ±âÈ­°¡ µÊ 
+    public void ì •ë¬´ë§ˆì¹˜ê¸°() // ì •ë¬´ë§ˆì¹˜ê¸°ë¥¼ ëˆŒë €ì„ ì‹œ ìŠ¤í…Œì´ì§€ê°€ ë„˜ì–´ê°€ë©´ì„œ ìŠ¤í…Œì´ì§€ë§ˆë‹¤ ë¶€ì—¬ë˜ëŠ” ê²Œì´ì§€ ìƒìŠ¹ê°’ë“¤ì´ ë¶€ì—¬ë¨. // ìƒì†Œë¬¸ count ë˜í•œ 0ìœ¼ë¡œ ì´ˆê¸°í™”ê°€ ë¨ 
     {
+        Click.num = 0;  // ìƒì†Œë¬¸ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+        
 
-        ½ºÅ©¸³Æ®ÁøÇàÇÔ¼ö();
+        ìŠ¤í¬ë¦½íŠ¸ì§„í–‰í•¨ìˆ˜();
+        
         stagenum++;
-        if(½ºÅ©¸³Æ®flag == false)
+        if(ìŠ¤í¬ë¦½íŠ¸flag == false)
         {
             SceneManager.LoadScene("day Scene");
+            Click.nextday = true;   // reloadingì—†ì´ ë‹¤ìŒë‚ 
         }
-        ½ºÅ©¸³Æ®flag = false;
+        ìŠ¤í¬ë¦½íŠ¸flag = false;
         
-        timecontroller.½Ã°£Áõ°¡();
+        timecontroller.ì‹œê°„ì¦ê°€();
         UI.gagemechanism();
-        »ó¼Ò¹®count = 0;
-        µ¥ÀÏ¸®¸®½ºÆ®();
+        ìƒì†Œë¬¸count = 0;
+        ë°ì¼ë¦¬ë¦¬ìŠ¤íŠ¸();
         for (int i = 0; i < dailySSM.Count; i++)
         {
             print(dailySSM[i]);
@@ -989,30 +992,30 @@ public class Clipboard : MonoBehaviour
 
     void Update()
     {
-        Invoke("¹öÆ°È°¼ºÈ­", 3f);
-        ¿£µùÁ¶°Ç();
+        Invoke("ë²„íŠ¼í™œì„±í™”", 3f);
+        ì—”ë”©ì¡°ê±´();
        
         if (B==2)
         {
-            Æ¯º°»ó¼Ò¹®Ç¥½Ã.SetActive(true);
+            íŠ¹ë³„ìƒì†Œë¬¸í‘œì‹œ.SetActive(true);
         } 
         else
         {
-            Æ¯º°»ó¼Ò¹®Ç¥½Ã.SetActive(false);
+            íŠ¹ë³„ìƒì†Œë¬¸í‘œì‹œ.SetActive(false);
         } 
         
     }
 
-    public void ¹öÆ°È°¼ºÈ­()
+    public void ë²„íŠ¼í™œì„±í™”()
     {
 
-        if (»ó¼Ò¹®count >= 8)
+        if (ìƒì†Œë¬¸count >= 8)
         {
-            Á¤¹«¸¶Ä¡±â¹öÆ°.SetActive(true);
+            ì •ë¬´ë§ˆì¹˜ê¸°ë²„íŠ¼.SetActive(true);
         }
         else
         {
-            Á¤¹«¸¶Ä¡±â¹öÆ°.SetActive(false);//¿ø·¡ false¿´À½
+            ì •ë¬´ë§ˆì¹˜ê¸°ë²„íŠ¼.SetActive(false);//ì›ë˜ falseì˜€ìŒ
         }
     }
 }
