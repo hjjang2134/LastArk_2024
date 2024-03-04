@@ -1048,6 +1048,11 @@ public class Clipboard : MonoBehaviour
         {
             특별상소문표시.SetActive(true);
         }
+        UI.현식량 = 10000;
+        UI.현인구 = 100000;
+        UI.현희망 = 100;
+        UI.현침식도 = 0;
+       
        
 
 

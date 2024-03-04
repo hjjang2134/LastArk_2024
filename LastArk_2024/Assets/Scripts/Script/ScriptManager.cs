@@ -142,7 +142,7 @@ public class ScriptManager : MonoBehaviour
         }
 
         //타임루프 사운드 
-        if (count == 160 || count == 239 || count == 292)
+        if (count == 160 || count == 239 || count == 292 || count == 216 || count == 321)
         {
             TimeLoopAud1.Play();
         }
