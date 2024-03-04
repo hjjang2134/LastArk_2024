@@ -22,7 +22,6 @@ public class Tipbook : MonoBehaviour
             book.DOLocalMoveX(605, 1f).SetEase(Ease.InBack);
     }
     public void Prev(){ // 이전 페이지
-        Debug.Log("dkr");
         currentpage--;
         if(currentpage >= 0){
             Show(currentpage);

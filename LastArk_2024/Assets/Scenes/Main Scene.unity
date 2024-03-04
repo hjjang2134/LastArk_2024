@@ -1615,6 +1615,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1640934455}
+        m_TargetAssemblyTypeName: clicksound, Assembly-CSharp
+        m_MethodName: Clicksound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &212000786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4013,6 +4025,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1640934455}
+        m_TargetAssemblyTypeName: clicksound, Assembly-CSharp
+        m_MethodName: Clicksound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643778899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5265,6 +5289,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1640934455}
+        m_TargetAssemblyTypeName: clicksound, Assembly-CSharp
+        m_MethodName: Clicksound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &825582114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5938,7 +5974,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968848393}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5947,8 +5983,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94.1, y: -0.8795}
-  m_SizeDelta: {x: 86.109, y: 9.9187}
+  m_AnchoredPosition: {x: 91.4843, y: -2.1873}
+  m_SizeDelta: {x: 83.4934, y: 25.6126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968848395
 MonoBehaviour:
@@ -6031,7 +6067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18039216, g: 0.16862746, b: 0.10980393, a: 1}
+  m_Color: {r: 0.18039216, g: 0.16862746, b: 0.10980393, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9362,7 +9398,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -60.921684, y: 12.814988, z: 145.86874, w: 20.576162}
+  m_margin: {x: 2.906952, y: 0.43031043, z: 2.9686966, w: -0.38251895}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9409,8 +9445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.39085, y: -177.27415}
-  m_SizeDelta: {x: 198.9818, y: 56.3726}
+  m_AnchoredPosition: {x: -254.66, y: -172.27}
+  m_SizeDelta: {x: 97.0465, y: 19.458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1487611565
 GameObject:
@@ -12181,6 +12217,18 @@ MonoBehaviour:
       - m_Target: {fileID: 598166892}
         m_TargetAssemblyTypeName: Tipbook, Assembly-CSharp
         m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1640934455}
+        m_TargetAssemblyTypeName: clicksound, Assembly-CSharp
+        m_MethodName: Clicksound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
