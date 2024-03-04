@@ -24,7 +24,7 @@ public class Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         Invoke("Backto", .2f);
     }
 
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(crash){
             if(other.gameObject.name.Equals("Script")){
