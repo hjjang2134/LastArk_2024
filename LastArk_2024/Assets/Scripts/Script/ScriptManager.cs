@@ -21,6 +21,8 @@ public class ScriptManager : MonoBehaviour
 
     public bool gogoodendingok = false, gorealendingok = false;
 
+    public AudioSource TimeLoopAud1;
+
 
 
     void Start()
@@ -138,7 +140,14 @@ public class ScriptManager : MonoBehaviour
             count++;
             Debug.Log("count++완료 count : " + count);
         }
-       
+
+        //타임루프 사운드 
+        if (count == 160 || count == 239 || count == 292)
+        {
+            TimeLoopAud1.Play();
+        }
+        
+
         Debug.Log("현재 count : " + count);
         if (count > 324) SceneManager.LoadScene("day Scene"); //원래 Main
     }
