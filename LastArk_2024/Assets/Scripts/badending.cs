@@ -65,8 +65,8 @@ public class endingimg : MonoBehaviour
 
     public void goToMain()
     {
-        SceneManager.LoadScene("Start Scene");
-    } //start씬으로
+        Application.Quit();
+    } //종료
 
     public void Onclick함수()
     {

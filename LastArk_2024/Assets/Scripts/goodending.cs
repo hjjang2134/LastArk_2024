@@ -31,8 +31,8 @@ public class RealEnding : MonoBehaviour
 
     public void goToMain()
     {
-        SceneManager.LoadScene("Start Scene");
-    } //start씬으로
+        Application.Quit();
+    } //종료
 
     public void 클릭()
     {

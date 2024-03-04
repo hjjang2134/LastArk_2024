@@ -26,8 +26,8 @@ public class realending : MonoBehaviour
 
     public void goToMain()
     {
-        SceneManager.LoadScene("Start Scene");
-    } //startæ¿¿∏∑Œ
+        Application.Quit();
+    } //¡æ∑·
 
     void Start()
     {
