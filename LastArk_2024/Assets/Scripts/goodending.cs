@@ -49,9 +49,14 @@ public class RealEnding : MonoBehaviour
 
                 }
 
+            else if (count == 3)
+        {
+            ´ë»ç1.text = "End 1.±Â¿£µù";
+        }
+
             
 
-            else if (count>=3)
+            else if (count>=4)
             {
 
                 
