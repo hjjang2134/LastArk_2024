@@ -15,11 +15,11 @@ public class Tipbook : MonoBehaviour
         Show(currentpage);
     }
 
-    public void Open(){ // 설명서 열기
-        book.DOLocalMoveX(50, 1f).SetEase(Ease.OutBack);
-    }        
-    public void Close(){    // 설명서 닫기
-        book.DOLocalMoveX(605, 1f).SetEase(Ease.InBack);
+    public void Open(){ // 설명서 열고 닫기
+        if(book.localPosition.x == 605)
+            book.DOLocalMoveX(50, 1f).SetEase(Ease.OutBack);
+        else if(book.localPosition.x == 50)
+            book.DOLocalMoveX(605, 1f).SetEase(Ease.InBack);
     }
     public void Prev(){ // 이전 페이지
         currentpage--;

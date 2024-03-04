@@ -16,153 +16,153 @@ using System.Linq;
 
 public class endingimg : MonoBehaviour
 {
-    public GameObject ÀÌ¹ÌÁö1;
-    public GameObject ÀÌ¹ÌÁö2;
-    public GameObject ÀÌ¹ÌÁö3;
-    public GameObject ÀÌ¹ÌÁö4;
-    public GameObject ¹öÆ°;
+    public GameObject ì´ë¯¸ì§€1;
+    public GameObject ì´ë¯¸ì§€2;
+    public GameObject ì´ë¯¸ì§€3;
+    public GameObject ì´ë¯¸ì§€4;
+    public GameObject ë²„íŠ¼;
     public GameObject goMain;
-    public TextMeshProUGUI ´ë»ç;
+    public TextMeshProUGUI ëŒ€ì‚¬;
     public static int count=0;
 
-    public TextMeshProUGUI goMainTxt; //¾ÈÁß¿äÇÔ
+    public TextMeshProUGUI goMainTxt; //ì•ˆì¤‘ìš”í•¨
     public float speed = 1.0f;
 
     void Start()
     {
         activeFalse();
-        if(Clipboard.Ä§½Äµµ¿£µù == true)
+        if(Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
         {
-            ÀÌ¹ÌÁö1.SetActive(true);
+            ì´ë¯¸ì§€1.SetActive(true);
         }
-        else if (Clipboard.ÀÎ±¸¿£µù == true)
+        else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
         {
-            ÀÌ¹ÌÁö2.SetActive(true);
+            ì´ë¯¸ì§€2.SetActive(true);
         }
-        else if (Clipboard.Èñ¸Á¿£µù == true)
+        else if (Clipboard.í¬ë§ì—”ë”© == true)
         {
-            ÀÌ¹ÌÁö3.SetActive(true);
+            ì´ë¯¸ì§€3.SetActive(true);
         }
-        else if (Clipboard.½Ä·®¿£µù == true)
+        else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
         {
-            ÀÌ¹ÌÁö4.SetActive(true);
+            ì´ë¯¸ì§€4.SetActive(true);
         }
     }
 
-    public void activeFalse() //ÀÌ¹ÌÁö ¸ğµÎ ²û
+    public void activeFalse() //ì´ë¯¸ì§€ ëª¨ë‘ ë”
     {
-        ÀÌ¹ÌÁö1.SetActive(false);
-        ÀÌ¹ÌÁö2.SetActive(false);
-        ÀÌ¹ÌÁö3.SetActive(false);
-        ÀÌ¹ÌÁö4.SetActive(false);
+        ì´ë¯¸ì§€1.SetActive(false);
+        ì´ë¯¸ì§€2.SetActive(false);
+        ì´ë¯¸ì§€3.SetActive(false);
+        ì´ë¯¸ì§€4.SetActive(false);
     }
 
     public void goToMain()
     {
         SceneManager.LoadScene("Start Scene");
-    } //start¾ÀÀ¸·Î
+    } //startì”¬ìœ¼ë¡œ
 
-    public void OnclickÇÔ¼ö()
+    public void Onclickí•¨ìˆ˜()
     {
         if (count == 0)
         {
-            if (Clipboard.Ä§½Äµµ¿£µù == true)
+            if (Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀº ¸ô·Á¿À´Â ¾îµÒÀ¸·ÎºÎÅÍ µµ½Ã¸¦ ÁöÅ°Áö ¸øÇß½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì€ ëª°ë ¤ì˜¤ëŠ” ì–´ë‘ ìœ¼ë¡œë¶€í„° ë„ì‹œë¥¼ ì§€í‚¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.";
             }
-            else if (Clipboard.ÀÎ±¸¿£µù == true)
+            else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀº ÁÖ¹ÎµéÀÇ ÁöÁö¸¦ ÀÒ¾ú½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì€ ì£¼ë¯¼ë“¤ì˜ ì§€ì§€ë¥¼ ìƒì—ˆìŠµë‹ˆë‹¤.";
             }
-            else if (Clipboard.Èñ¸Á¿£µù == true)
+            else if (Clipboard.í¬ë§ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀº ÁÖ¹ÎµéÀÇ Èñ¸ÁÀ» ½Ãµé°Ô Çß½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì€ ì£¼ë¯¼ë“¤ì˜ í¬ë§ì„ ì‹œë“¤ê²Œ í–ˆìŠµë‹ˆë‹¤.";
             }
-            else if (Clipboard.½Ä·®¿£µù == true)
+            else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
             {
-                ´ë»ç.text = "¸ğµç ¹°ÀÌ ¿À¿°µÇ°í °î¹°Àº ½Ãµé¾ú½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ëª¨ë“  ë¬¼ì´ ì˜¤ì—¼ë˜ê³  ê³¡ë¬¼ì€ ì‹œë“¤ì—ˆìŠµë‹ˆë‹¤.";
             }
         }
 
         else if (count == 1)
         {
-            if (Clipboard.Ä§½Äµµ¿£µù == true)
+            if (Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
             {
-                ´ë»ç.text = "¼¼°èÀÇ ¸¶Áö¸· ºûÀº ²¨Áö°í,";
+                ëŒ€ì‚¬.text = "ì„¸ê³„ì˜ ë§ˆì§€ë§‰ ë¹›ì€ êº¼ì§€ê³ ,";
             }
-            else if (Clipboard.ÀÎ±¸¿£µù == true)
+            else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
             {
-                ´ë»ç.text = "Àß¸øµÈ ¼±ÅÃÀÇ ¿¬¼ÓÀ¸·Î ÀÎÇØ ÁÖ¹ÎµéÀº ½Å·Ú¸¦ ÀÒ¾ú°í,";
+                ëŒ€ì‚¬.text = "ì˜ëª»ëœ ì„ íƒì˜ ì—°ì†ìœ¼ë¡œ ì¸í•´ ì£¼ë¯¼ë“¤ì€ ì‹ ë¢°ë¥¼ ìƒì—ˆê³ ,";
             }
-            else if (Clipboard.Èñ¸Á¿£µù == true)
+            else if (Clipboard.í¬ë§ì—”ë”© == true)
             {
-                ´ë»ç.text = "ÁÖ¹ÎµéÀº ´õ ÀÌ»ó ¼º ¾È¿¡¼­ÀÇ Çàº¹ÇÑ ¹Ì·¡¸¦ ²Ş²ÙÁö ¸øÇÕ´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ì£¼ë¯¼ë“¤ì€ ë” ì´ìƒ ì„± ì•ˆì—ì„œì˜ í–‰ë³µí•œ ë¯¸ë˜ë¥¼ ê¿ˆê¾¸ì§€ ëª»í•©ë‹ˆë‹¤.";
             }
-            else if (Clipboard.½Ä·®¿£µù == true)
+            else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
             {
-                ´ë»ç.text = "¼ºÀÇ ÀúÀå°í´Â ÅÖ ºñ¾î °î¹° ÇÑÅç º¸ÀÌÁö ¾Ê½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ì„±ì˜ ì €ì¥ê³ ëŠ” í…… ë¹„ì–´ ê³¡ë¬¼ í•œí†¨ ë³´ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.";
             }
         }
         else if (count == 2)
         {
-            if (Clipboard.Ä§½Äµµ¿£µù == true)
+            if (Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
             {
-                ´ë»ç.text = "¿Â ¼¼°è´Â ¾îµÒÀ¸·Î °¡µæ Â÷°Ô µÇ¾ú½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ì˜¨ ì„¸ê³„ëŠ” ì–´ë‘ ìœ¼ë¡œ ê°€ë“ ì°¨ê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤.";
             }
-            else if (Clipboard.ÀÎ±¸¿£µù == true)
+            else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
             {
-                ´ë»ç.text = "¸ğµÎ°¡ ´ç½ÅÀÇ ÀÚÁúÀ» ÀÇ½ÉÇÕ´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ëª¨ë‘ê°€ ë‹¹ì‹ ì˜ ìì§ˆì„ ì˜ì‹¬í•©ë‹ˆë‹¤.";
             }
-            else if (Clipboard.Èñ¸Á¿£µù == true)
+            else if (Clipboard.í¬ë§ì—”ë”© == true)
             {
-                ´ë»ç.text = "ÁÖ¹ÎµéÀº ´ç½ÅÀ» ³»ÂÑ±â À§ÇØ ¹İ¶õÀ» ¸ğÀÇÇß½À´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ì£¼ë¯¼ë“¤ì€ ë‹¹ì‹ ì„ ë‚´ì«“ê¸° ìœ„í•´ ë°˜ë€ì„ ëª¨ì˜í–ˆìŠµë‹ˆë‹¤.";
             }
-            else if (Clipboard.½Ä·®¿£µù == true)
+            else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
             {
-                ´ë»ç.text = "¼º ¾ÈÀº ±¾ÁÖ¸²¿¡ ¹ÌÃÄ¹ö¸° »ç¶÷µé·Î °¡µæÇÕ´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ì„± ì•ˆì€ êµ¶ì£¼ë¦¼ì— ë¯¸ì³ë²„ë¦° ì‚¬ëŒë“¤ë¡œ ê°€ë“í•©ë‹ˆë‹¤.";
             }
         }
         else if (count == 3)
         {
-            if (Clipboard.Ä§½Äµµ¿£µù == true)
+            if (Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½Å°ú ÁÖ¹ÎµéÀº Á×À½¸¸À» ±â´Ù¸³´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ê³¼ ì£¼ë¯¼ë“¤ì€ ì£½ìŒë§Œì„ ê¸°ë‹¤ë¦½ë‹ˆë‹¤.";
             }
-            else if (Clipboard.ÀÎ±¸¿£µù == true)
+            else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀº ¾Æ¹«µµ ¾ø´Â ÅÖ ºó ¼º¿¡¼­ È¥ÀÚ ¾µ¾µÈ÷ Á×À½À» ¸ÂÀÌÇÕ´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì€ ì•„ë¬´ë„ ì—†ëŠ” í…… ë¹ˆ ì„±ì—ì„œ í˜¼ì ì“¸ì“¸íˆ ì£½ìŒì„ ë§ì´í•©ë‹ˆë‹¤.";
             }
-            else if (Clipboard.Èñ¸Á¿£µù == true)
+            else if (Clipboard.í¬ë§ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀº ÁÖ¹Îµé·Î ÀÎÇØ Ã³Çü´çÇÕ´Ï´Ù. ";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì€ ì£¼ë¯¼ë“¤ë¡œ ì¸í•´ ì²˜í˜•ë‹¹í•©ë‹ˆë‹¤. ";
             }
-            else if (Clipboard.½Ä·®¿£µù == true)
+            else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
             {
-                ´ë»ç.text = "´ç½ÅÀ» Æ÷ÇÔÇÑ ¸ğµç ¼º ¾ÈÀÇ »ç¶÷µéÀº °¥Áõ°ú ±¾ÁÖ¸²À¸·Î ÀüºÎ »ç¸ÁÇÒ °ÍÀÔ´Ï´Ù.";
+                ëŒ€ì‚¬.text = "ë‹¹ì‹ ì„ í¬í•¨í•œ ëª¨ë“  ì„± ì•ˆì˜ ì‚¬ëŒë“¤ì€ ê°ˆì¦ê³¼ êµ¶ì£¼ë¦¼ìœ¼ë¡œ ì „ë¶€ ì‚¬ë§í•  ê²ƒì…ë‹ˆë‹¤.";
             }
         }
         else if (count == 4)
         {
-            if (Clipboard.Ä§½Äµµ¿£µù == true)
+            if (Clipboard.ì¹¨ì‹ë„ì—”ë”© == true)
             {
-                ´ë»ç.text = "Bad Ending 4. ¾îµÒ";
+                ëŒ€ì‚¬.text = "Bad Ending 4. ì–´ë‘ ";
             }
-            else if (Clipboard.ÀÎ±¸¿£µù == true)
+            else if (Clipboard.ì¸êµ¬ì—”ë”© == true)
             {
-                ´ë»ç.text = "Bad Ending 2. ÅÖ ºó ÆóÇã";
+                ëŒ€ì‚¬.text = "Bad Ending 2. í…… ë¹ˆ íí—ˆ";
             }
-            else if (Clipboard.Èñ¸Á¿£µù == true)
+            else if (Clipboard.í¬ë§ì—”ë”© == true)
             {
-                ´ë»ç.text = "Bad Ending 1. ¹İ¶õ";
+                ëŒ€ì‚¬.text = "Bad Ending 1. ë°˜ë€";
             }
-            else if (Clipboard.½Ä·®¿£µù == true)
+            else if (Clipboard.ì‹ëŸ‰ì—”ë”© == true)
             {
-                ´ë»ç.text = "Bad Ending 3. ´ë±â±Ù";
+                ëŒ€ì‚¬.text = "Bad Ending 3. ëŒ€ê¸°ê·¼";
             }
         }
         else
         {
-            ¹öÆ°.SetActive(false);
+            ë²„íŠ¼.SetActive(false);
             goMain.SetActive(true);
         }
 
