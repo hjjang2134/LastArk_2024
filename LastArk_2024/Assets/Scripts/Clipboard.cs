@@ -860,7 +860,7 @@ public class Clipboard : MonoBehaviour
        
         else if (stagenum == 18)
         {
-            if ((깬시간석1==true)&& (깬시간석2 == true)&& (깬시간석3 == true)&&(EugeneAlive ==true))
+            if ((깬시간석1==true)&& (깬시간석2 == true)&& (시간석3 == true)&&(EugeneAlive ==true))
             {
                 
                 go_ScriptScene();
@@ -1007,7 +1007,9 @@ public class Clipboard : MonoBehaviour
         {
             특별상소문표시.SetActive(false);
         } */
-        
+       
+
+
     }
 
     public void 버튼활성화()
