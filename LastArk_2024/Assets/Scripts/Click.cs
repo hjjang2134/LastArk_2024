@@ -6,7 +6,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class Click : MonoBehaviour
+public class Click : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public RectTransform stampPanel, scriptPanel1;
     public GameObject acceptimg, ignoreimg;
@@ -15,6 +15,8 @@ public class Click : MonoBehaviour
     public static int num = 0; // 상소문 갯수
     public static bool nextday = false;  // 씬 reloading없이 다음날
     public TextMeshProUGUI scriptnum;   // 상소문 갯수
+    public static Vector2 DefaultPos;   // 처음 위치
+    public static bool crash = true;   // 충돌 감지  
     private void Start()
     {
         ignoreimg.SetActive(false);
@@ -29,6 +31,37 @@ public class Click : MonoBehaviour
             Invoke("Settext", 2f);
             nextday = false;
         }
+    } 
+
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)  // 드래그 시작
+    {
+        DefaultPos = this.transform.position;
+        crash = true;
+    }
+    void IDragHandler.OnDrag(PointerEventData eventData)    // 드래그 중
+    {
+        Vector2 currentPos = eventData.position;
+        this.transform.position = currentPos;
+    }
+
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData)  // 드래그 끝나면!
+    {
+        Backto();
+    }
+
+    /*void OnTriggerEnter2D(Collider2D other)
+    {
+        if(crash){
+            if(other.gameObject.name.Equals("Script")){
+                crash = false;
+                Backto();
+            }    
+        }
+    }*/
+
+    void Backto()   // 원위치로
+    {
+        this.transform.position = DefaultPos;
     }
 
     void Settext(){ // 상소문 갯수 초기화
@@ -37,21 +70,22 @@ public class Click : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Accept"))
+        if (crash && other.gameObject.tag.Equals("Accept"))
         {
-            if (gameObject.tag.Equals("acceptstamp"))    // ����
+            if (gameObject.tag.Equals("acceptstamp"))    // 수락
             {
                 acceptimg.SetActive(true);
                 Clipboard.수락();
                 Clipboard.resetB();
+                crash = false;
             }
 
-            if (gameObject.tag.Equals("ignorestamp"))    // ����
+            if (gameObject.tag.Equals("ignorestamp"))    // 거절
             {
                 ignoreimg.SetActive(true);
                 Clipboard.거절();
-
                 Clipboard.resetB();
+                crash = false;
             }
             stampsound.Play();
 
