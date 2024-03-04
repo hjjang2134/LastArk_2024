@@ -73,6 +73,7 @@ public class Click : MonoBehaviour
         scriptPanel1.localPosition = new Vector2(70, -347);
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
+        특상표시.SetActive(false);
     }
    
 }

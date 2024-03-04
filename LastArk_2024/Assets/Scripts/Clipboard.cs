@@ -999,10 +999,10 @@ public class Clipboard : MonoBehaviour
         {
             특별상소문표시.SetActive(true);
         } 
-        else
+        /*else
         {
             특별상소문표시.SetActive(false);
-        } 
+        } */
         
     }
 
