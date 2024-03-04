@@ -956,7 +956,7 @@ public class Clipboard : MonoBehaviour
         
         stagenum++;
         if(스크립트flag == false)
-        {
+        {  
             SceneManager.LoadScene("day Scene");
             Click.nextday = true;   // reloading없이 다음날
         }
