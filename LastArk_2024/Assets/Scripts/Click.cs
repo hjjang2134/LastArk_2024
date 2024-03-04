@@ -13,14 +13,26 @@ public class Click : MonoBehaviour
     public AudioSource stampsound;
     public GameObject 특상표시;
     public static int num = 0; // 상소문 갯수
-    public bool isStamp = true;
+    public static bool nextday = false;  // 씬 reloading없이 다음날
     public TextMeshProUGUI scriptnum;   // 상소문 갯수
     private void Start()
     {
-        num = 0;
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
         stampsound = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if(nextday){
+            Invoke("Back1", 2f);
+            Invoke("Settext", 2f);
+            nextday = false;
+        }
+    }
+
+    void Settext(){ // 상소문 갯수 초기화
+        scriptnum.text = "0/8";
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,7 +41,6 @@ public class Click : MonoBehaviour
         {
             if (gameObject.tag.Equals("acceptstamp"))    // ����
             {
-                isStamp = false;
                 acceptimg.SetActive(true);
                 Clipboard.수락();
                 Clipboard.resetB();
@@ -37,7 +48,6 @@ public class Click : MonoBehaviour
 
             if (gameObject.tag.Equals("ignorestamp"))    // ����
             {
-                isStamp = false;
                 ignoreimg.SetActive(true);
                 Clipboard.거절();
 
@@ -53,18 +63,17 @@ public class Click : MonoBehaviour
             num++;
             scriptnum.text = num + "/8";
             if(num <= 7){
-                Invoke("Back1", 3f);
+                Invoke("Back1", 2f);
             }
         }
     }
 
-
-    void Back1()
+    public void Back1()  // 상소문 밑으로
     {
-        isStamp = true;
         scriptPanel1.localPosition = new Vector2(70, -347);
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
+        특상표시.SetActive(false);
     }
    
 }
