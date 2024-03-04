@@ -23,12 +23,12 @@ public class Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         Invoke("Backto", .2f);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.name.Equals("Script")){
-            Invoke("Backto", .2f);
+            Backto();
         }    
-    }
+    }*/
 
     void Backto()
     {
