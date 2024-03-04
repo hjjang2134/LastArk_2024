@@ -20,12 +20,18 @@ public class realending : MonoBehaviour
     public GameObject 버튼;
     public static int count = 1;
 
+    public GameObject goMain;
+    public TextMeshProUGUI goMainTxt; //안중요함
+    public float speed = 1.0f;
+
+    public void goToMain()
+    {
+        SceneManager.LoadScene("Start Scene");
+    } //start씬으로
+
     void Start()
     {
         대사1.text = "당신은 과거의 비밀을 밝혀냈습니다. ";
-
-
-
     }
 
 
@@ -59,12 +65,29 @@ public class realending : MonoBehaviour
 
         }
 
-        else if (count >= 4)
+        else if (count == 4)
+        {
+
+            대사1.text = "True Ending. 완전한 미래";
+
+
+        }
+
+        else if (count >= 5)
         {
             버튼.SetActive(false);
+            goMain.SetActive(true);
         }
 
         count++;
+    }
+
+    private void Update()
+    {
+        float alpha = Mathf.PingPong(Time.time * speed, 1);
+        Color currentColor = goMainTxt.color;
+        currentColor.a = alpha;
+        goMainTxt.color = currentColor;
     }
 
 
