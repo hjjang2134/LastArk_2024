@@ -1963,7 +1963,7 @@ MonoBehaviour:
   Scinfo1: {fileID: 31974232}
   "\uC815\uBB34\uB9C8\uCE58\uAE30\uBC84\uD2BC": {fileID: 1487611565}
   "\uD2B9\uBCC4\uC0C1\uC18C\uBB38\uD45C\uC2DC": {fileID: 1357901779}
-  fadeInImg: {fileID: 0}
+  fadeInImg: {fileID: 118367105}
 --- !u!1 &285563793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,7 +7567,7 @@ MonoBehaviour:
   Scinfo1: {fileID: 31974232}
   "\uC815\uBB34\uB9C8\uCE58\uAE30\uBC84\uD2BC": {fileID: 1487611565}
   "\uD2B9\uBCC4\uC0C1\uC18C\uBB38\uD45C\uC2DC": {fileID: 1357901779}
-  fadeInImg: {fileID: 0}
+  fadeInImg: {fileID: 118367105}
 --- !u!114 &1357901782
 MonoBehaviour:
   m_ObjectHideFlags: 0
