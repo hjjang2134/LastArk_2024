@@ -29,7 +29,7 @@ public class ScriptManager : MonoBehaviour
         scriptText = GameObject.Find("ScriptText").GetComponent<TypeEffect>();
         nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
         
-        스칼렛Image.SetActive(false);
+        스칼렛Image.SetActive(false); //인물 이미지 꺼놓기
         유진Image.SetActive(false);
         레이Image.SetActive(false);
 
@@ -37,7 +37,7 @@ public class ScriptManager : MonoBehaviour
         선택지bt2 = GameObject.Find("선택지버튼2").GetComponent<Button>();
         선택지bt3 = GameObject.Find("선택지버튼3").GetComponent<Button>();
 
-        선택지버튼ob1.SetActive(false);
+        선택지버튼ob1.SetActive(false); //버튼 설정하고 꺼놓음
         선택지버튼ob2.SetActive(false);
         선택지버튼ob3.SetActive(false);
 
@@ -78,10 +78,10 @@ public class ScriptManager : MonoBehaviour
             string content = data_Dialog[count]["content"].ToString(); //script 불러와서 텍스트 바꿈
             scriptText.SetMsg(content);
         }
-        else
+        else //story열 값이 바뀐다면 
         {
             story = data_Dialog[count]["story"].ToString();
-            if((count == 324) || (count == 319)) 
+            if((count == 324) || (count == 319)) //스토리 마지막임
             {
                 if (gogoodendingok == true) SceneManager.LoadScene("GoodEnding");
                 else if (gorealendingok == true) SceneManager.LoadScene("RealEnding");
@@ -92,11 +92,26 @@ public class ScriptManager : MonoBehaviour
             {
                 count--;
                 scriptscene = false;
-                SceneManager.LoadScene("day Scene"); //원래 main
+                if (Clipboard.stagenum < 19)
+                {
+                    SceneManager.LoadScene("day Scene"); //원래 main
+                }
+                
             }
         }
-        if (count == 78) //건너뛰기 (ex: sub2-1 >> sub3),
-                         //조건: sub2-1 마지막, count: sub3의 첫번째
+
+        //건너뛰기 (ex: sub2-1 >> sub3), 조건: sub2-1 마지막, count: sub3의 첫번째
+        if (count == 0 && Clipboard.Sub1 != true)//1일차 "빛의 정체" 상소문 실패시 sub2로 건너뛰기
+        {
+            count = 28;
+        }
+        if (count < 125 && count > 120 && Clipboard.main1 != true) //9일차 main1 false일시
+        {
+            count = 159;
+        }
+
+        else if (count == 78) //여기서부터는 선택지에 따른 건너뛰기 //sub2-1 -> sub3
+                        
         {
             count = 84;
         }

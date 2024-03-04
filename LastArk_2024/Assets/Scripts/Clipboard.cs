@@ -87,10 +87,12 @@ public class Clipboard : MonoBehaviour
     public static bool common1 = false;
     public static bool common2 = false;
     public static bool common3 = false;
+
     public static bool 침식도엔딩 = false;
     public static bool 인구엔딩 = false;
     public static bool 식량엔딩 = false;
     public static bool 스크립트flag = false; 
+
     
 
 
@@ -178,6 +180,11 @@ public class Clipboard : MonoBehaviour
         else if (UI.현식량 == 0)
         {
             식량엔딩 = true;
+            gobadending();
+        }
+        else if (UI.현희망 == 0)
+        {
+            희망엔딩 = true;
             gobadending();
         }
     }
