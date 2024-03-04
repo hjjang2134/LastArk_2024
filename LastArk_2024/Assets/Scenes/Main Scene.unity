@@ -988,12 +988,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 726328063}
+  m_Father: {fileID: 373712516}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.00003, y: 29.500076}
+  m_AnchoredPosition: {x: 380, y: 128.80008}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136974082
@@ -1289,7 +1289,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!1 &206740324
 GameObject:
@@ -1739,7 +1738,6 @@ MonoBehaviour:
   i18: {fileID: 855419408}
   i19: {fileID: 1078000326}
   i20: {fileID: 1927166311}
-  ne: {fileID: 136974080}
   checkEvent: 0
 --- !u!114 &272602398
 MonoBehaviour:
@@ -1996,7 +1994,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!114 &342796628
 MonoBehaviour:
@@ -2313,6 +2310,7 @@ RectTransform:
   - {fileID: 1135959143}
   - {fileID: 2133207528}
   - {fileID: 726328063}
+  - {fileID: 136974081}
   - {fileID: 1487611566}
   - {fileID: 272602393}
   - {fileID: 342796626}
@@ -3776,8 +3774,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 136974081}
+  m_Children: []
   m_Father: {fileID: 373712516}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3939,7 +3936,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!114 &726328070
 MonoBehaviour:
@@ -6057,7 +6053,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 0}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!114 &1135959145
 MonoBehaviour:
@@ -6971,7 +6966,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 1403632853}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!114 &1403632852
 MonoBehaviour:
@@ -8104,7 +8098,6 @@ MonoBehaviour:
   ignoreimg: {fileID: 472548417}
   stampsound: {fileID: 0}
   "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
-  isStamp: 1
   scriptnum: {fileID: 10933386}
 --- !u!1 &1472031968
 GameObject:
