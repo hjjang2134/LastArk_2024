@@ -373,51 +373,51 @@ public class Clipboard : MonoBehaviour
         }
         if (stagenum == 7)
         {
-            maxNum = 66;
+            maxNum = 59;
         }
         if (stagenum == 8)
         {
-            maxNum = 59;
+            maxNum = 52;
         }
         if (stagenum == 9)
         {
-            maxNum = 52;
+            maxNum = 45;
         }
         if (stagenum == 10)
         {
-            maxNum = 45;
+            maxNum = 38;
         }
         if (stagenum == 11)
         {
-            maxNum = 38;
+            maxNum = 32;
         }
         if (stagenum == 12)
         {
-            maxNum = 68;
+            maxNum = 55;
         }
         if (stagenum == 13)
         {
-            maxNum = 61;
+            maxNum = 48;
         }
         if (stagenum == 14)
         {
-            maxNum = 54;
+            maxNum = 41;
         }
         if (stagenum == 15)
         {
-            maxNum = 47;
+            maxNum = 34;
         }
         if (stagenum == 16)
         {
-            maxNum = 40;
+            maxNum = 27;
         }
         if (stagenum == 17)
         {
-            maxNum = 33;
+            maxNum = 20;
         }
         if (stagenum == 18)
         {
-            maxNum = 26;
+            maxNum = 13;
         }
         if (isExit) // 스토리상소문이 뽑혔으면
         {
@@ -1048,11 +1048,8 @@ public class Clipboard : MonoBehaviour
         {
             특별상소문표시.SetActive(true);
         }
-        /*else
-        {
-            특별상소문표시.SetActive(false);
-        } */
        
+
 
 
     }
