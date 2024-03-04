@@ -17,7 +17,6 @@ public class Click : MonoBehaviour
     public TextMeshProUGUI scriptnum;   // 상소문 갯수
     private void Start()
     {
-        num = 0;
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
         stampsound = GetComponent<AudioSource>();
@@ -59,9 +58,8 @@ public class Click : MonoBehaviour
     }
 
 
-    void Back1()
+    public void Back1()  // 상소문 밑으로
     {
-        isStamp = true;
         scriptPanel1.localPosition = new Vector2(70, -347);
         ignoreimg.SetActive(false);
         acceptimg.SetActive(false);
