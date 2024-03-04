@@ -115,7 +115,7 @@ public class tutorial : MonoBehaviour
                 text1.SetMsg("당신의 사람들을 지키며 살아남으십시오.");
                 break;
             case 19:
-                SceneManager.LoadScene("Main Scene");
+                SceneManager.LoadScene("day Scene");
                 break;
             
 
@@ -126,6 +126,6 @@ public class tutorial : MonoBehaviour
    
     public void nextScene()
     {
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("day Scene");
     }
 }

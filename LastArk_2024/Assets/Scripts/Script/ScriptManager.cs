@@ -92,7 +92,7 @@ public class ScriptManager : MonoBehaviour
             {
                 count--;
                 scriptscene = false;
-                SceneManager.LoadScene("Main Scene");
+                SceneManager.LoadScene("day Scene"); //원래 main
             }
         }
         if (count == 78) //건너뛰기 (ex: sub2-1 >> sub3),
@@ -117,7 +117,7 @@ public class ScriptManager : MonoBehaviour
         }
        
         Debug.Log("현재 count : " + count);
-        if (count > 324) SceneManager.LoadScene("Main Scene");
+        if (count > 324) SceneManager.LoadScene("day Scene"); //원래 Main
     }
 
     public void CharacterAction(string name) //캐릭터 그림 올라오고 이름 바뀌게

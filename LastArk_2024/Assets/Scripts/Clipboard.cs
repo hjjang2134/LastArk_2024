@@ -91,6 +91,7 @@ public class Clipboard : MonoBehaviour
     public static bool 침식도엔딩 = false;
     public static bool 인구엔딩 = false;
     public static bool 식량엔딩 = false;
+    public static bool 스크립트flag = false; 
     
 
 
@@ -817,30 +818,36 @@ public class Clipboard : MonoBehaviour
 
         {
             go_ScriptScene();
+            스크립트flag = true;
         }
 
         else if (stagenum == 3)
         {
             go_ScriptScene();
+            스크립트flag = true;
         }
 
         else if (stagenum == 6)
         {
             go_ScriptScene();
+            스크립트flag = true;
         }
         else if ((stagenum == 8) && (main1 == true))
         {
             go_ScriptScene();
+            스크립트flag = true;
         }
         else if ((stagenum == 11) && (main2 == true))
         {
             go_ScriptScene();
+            스크립트flag = true;
             //시간석2 = false;
             //깬시간석2 = true;
         }
         else if ((stagenum == 14) && (main3 == true))
         {
             go_ScriptScene();
+            스크립트flag = true;
             시간석2 = true;
             //시간석 = false;
             //깬시간석3 = true;
@@ -848,20 +855,27 @@ public class Clipboard : MonoBehaviour
         else if ((stagenum == 15 )&&(시간석2 ==true))
         {
             깬시간석2 = true;
-            시간석2 = false; 
+            시간석2 = false;
+            스크립트flag = false;
         }
        
         else if (stagenum == 18)
         {
             if ((깬시간석1==true)&& (깬시간석2 == true)&& (깬시간석3 == true)&&(EugeneAlive ==true))
             {
+                
                 go_ScriptScene();
+                스크립트flag = true;
             }
             else
             {
+                
                 gogoodending();
+                스크립트flag = true;
             }
         }
+       
+        
     }
 
 
@@ -930,8 +944,12 @@ public class Clipboard : MonoBehaviour
     {
 
         스크립트진행함수();
-       
         stagenum++;
+        if(스크립트flag == false)
+        {
+            SceneManager.LoadScene("day Scene");
+        }
+        스크립트flag = false;
         
         timecontroller.시간증가();
         UI.gagemechanism();
@@ -974,14 +992,14 @@ public class Clipboard : MonoBehaviour
         Invoke("버튼활성화", 3f);
         엔딩조건();
        
-        /* if (B==2)
+        if (B==2)
         {
             특별상소문표시.SetActive(true);
         } 
         else
         {
             특별상소문표시.SetActive(false);
-        } */
+        } 
         
     }
 
