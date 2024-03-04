@@ -127,7 +127,8 @@ public class Clipboard : MonoBehaviour
     public static int A ; // 성공 or 실패 확률 구분 
     public static int B = 0; //특별상소문 일반상소문 구분 일반상소문일 경우 1, 특별상소문은 2, 스토리 상소문일 경우 3
     public static float 게이지; // 불러올게이지
-   
+
+    public Image fadeInImg;
 
 
     public static void resetB()
@@ -136,7 +137,7 @@ public class Clipboard : MonoBehaviour
     }
     private void Start()
     {
-
+        fadeInImg.enabled= false;
         정무마치기버튼.SetActive(false); //false로 잠시 바꿈
         특별상소문표시.SetActive(false); //추가
         
@@ -189,21 +190,35 @@ public class Clipboard : MonoBehaviour
             gobadending();
         }
     }
-   
-
-
 
     
 
-    public static void gobadending()
+
+    public void gobadending()
     {
-            SceneManager.LoadScene("BadEnding");
+        StartCoroutine(FadeCo());
     }
     public static void gogoodending()
     {
         SceneManager.LoadScene("GoodEnding");
     }
-    
+
+    public IEnumerator FadeCo()
+    {
+        Debug.Log("코루틴 진입");
+        fadeInImg.enabled = true;
+
+        float fadeCount = 0;
+        while (fadeCount < 1.0f)
+        {
+            fadeCount += 0.01f;
+            yield return new WaitForSeconds(0.01f);
+            fadeInImg.color = new Color(0, 0, 0, fadeCount);
+        }
+
+        SceneManager.LoadScene("BadEnding");
+    }
+
     public void 상소문통합함수() //상소문 등장시킬 때 적용할 함수
     {
         int number = dailySSM[상소문count];

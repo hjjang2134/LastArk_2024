@@ -140,12 +140,12 @@ public class gageindecrease : MonoBehaviour
             if (침식도게이지증감 > 0)
             {
                 침식도게이지증감량.text = " +" + 침식도게이지증감.ToString();
-                침식도게이지증감량.color = Color.green;
+                침식도게이지증감량.color = Color.red;
             }
             else
             {
                 침식도게이지증감량.text = 침식도게이지증감.ToString();
-                침식도게이지증감량.color = Color.red;
+                침식도게이지증감량.color = Color.green;
             }
 
         }
