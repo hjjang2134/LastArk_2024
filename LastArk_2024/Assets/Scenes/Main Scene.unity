@@ -2516,6 +2516,7 @@ RectTransform:
   - {fileID: 315795271}
   - {fileID: 2007903690}
   - {fileID: 1191082552}
+  - {fileID: 1923734629}
   - {fileID: 171960454}
   - {fileID: 1135959143}
   - {fileID: 2133207528}
@@ -2526,7 +2527,6 @@ RectTransform:
   - {fileID: 342796626}
   - {fileID: 851520232}
   - {fileID: 1837778331}
-  - {fileID: 1923734629}
   - {fileID: 1191884878}
   - {fileID: 747792832}
   - {fileID: 1788817864}
