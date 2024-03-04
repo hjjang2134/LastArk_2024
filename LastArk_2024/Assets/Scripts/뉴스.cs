@@ -37,154 +37,121 @@ public class 뉴스 : MonoBehaviour
         {
             Hide();
             i1.SetActive (true);
-            Check();
         }
         if (Clipboard.fail150 == true)
         {
             Hide();
             i2.SetActive (true);
-            Check();
         }
         if (Clipboard.rej150 == true)
         {
             Hide();
             i3.SetActive (true);
-            Check();
         }
         if (Clipboard.suc151 == true)
         {
             Hide();
             i4.SetActive(true);
-            Check();
         }
         if (Clipboard.fail151 == true)
         {
             Hide();
             i5.SetActive(true);
-            Check();
         }
         if (Clipboard.rej151 == true)
         {
             Hide();
             i6.SetActive(true);
-            Check();
         }
         if (Clipboard.suc152 == true)
         {
             Hide();
             i7.SetActive(true);
-            Check();
         }
         if (Clipboard.fail152 == true)
         {
             Hide();
             i8.SetActive(true);
-            Check();
         }
         if (Clipboard.rej152 == true)
         {
             Hide();
             i9.SetActive(true);
-            Check();
         }
         if (Clipboard.suc153 == true)
         {
             Hide();
             i10.SetActive(true);
-            Check();
         }
         if (Clipboard.fail153 == true)
         {
             Hide();
             i11.SetActive(true);
-            Check();
         }
         if (Clipboard.rej153 == true)
         {
             Hide();
             i11.SetActive(true);
-            Check();
         }
         if (Clipboard.suc154 == true)
         {
             Hide();
             i12.SetActive(true);
-            Check();
         }
         if (Clipboard.fail154 == true)
         {
             Hide();
             i13.SetActive(true);
-            Check();
         }
         if (Clipboard.rej154 == true)
         {
             Hide();
             i13.SetActive(true);
-            Check();
         }
         if (Clipboard.suc155 == true)
         {
             Hide();
             i14.SetActive(true);
-            Check();
         }
         if (Clipboard.fail155 == true)
         {
             Hide();
             i15.SetActive(true);
-            Check();
         }
         if (Clipboard.rej155 == true)
         {
             Hide();
             i15.SetActive(true);
-            Check();
         }
         if (Clipboard.suc156 == true)
         {
             Hide();
             i16.SetActive(true);
-            Check();
         }
         if (Clipboard.fail156 == true)
         {
             Hide();
             i17.SetActive(true);
-            Check();
         }
         if (Clipboard.rej156 == true)
         {
             Hide();
             i18.SetActive(true);
-            Check();
         }
         if (Clipboard.common1 == true)
         {
             Hide();
             i19.SetActive(true);
-            Check();
         }
         if (Clipboard.common2 == true)
         {
             Hide();
             i20.SetActive(true);
-            Check();
         }
         if (Clipboard.common3 == true)
         {
             Hide();
             i20.SetActive(true);
-            Check();
-        }
-    }
-
-    public void Check(){
-        
-        if(isOpen){ // 뉴스를 열어봤나?
-            Debug.Log("들어왓나");
-            ne.SetActive(false);
-            isOpen = false;
         }
     }
 

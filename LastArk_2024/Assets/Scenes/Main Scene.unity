@@ -3747,6 +3747,8 @@ GameObject:
   - component: {fileID: 726328066}
   - component: {fileID: 726328065}
   - component: {fileID: 726328068}
+  - component: {fileID: 726328069}
+  - component: {fileID: 726328070}
   m_Layer: 5
   m_Name: open btn
   m_TagString: Untagged
@@ -3843,6 +3845,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 726328070}
+        m_TargetAssemblyTypeName: Del, Assembly-CSharp
+        m_MethodName: Seen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &726328066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3898,6 +3912,39 @@ MonoBehaviour:
   stampPanel: {fileID: 1837778331}
   scriptPanel: {fileID: 1446048290}
   scriptin: {fileID: 0}
+--- !u!114 &726328069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726328062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951835527a3511e45bf4f0a269bfd7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stampPanel: {fileID: 1837778331}
+  scriptPanel1: {fileID: 1446048290}
+  acceptimg: {fileID: 615566714}
+  ignoreimg: {fileID: 472548417}
+  stampsound: {fileID: 0}
+  "\uD2B9\uC0C1\uD45C\uC2DC": {fileID: 1357901779}
+  isStamp: 1
+  scriptnum: {fileID: 10933386}
+--- !u!114 &726328070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726328062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768ab446ccad8f649839975af03f2683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ne: {fileID: 136974080}
 --- !u!1 &747792831
 GameObject:
   m_ObjectHideFlags: 0
