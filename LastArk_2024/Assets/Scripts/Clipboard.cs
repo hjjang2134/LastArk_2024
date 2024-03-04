@@ -562,9 +562,9 @@ public class Clipboard : MonoBehaviour
 
     public static void go_ScriptScene()
     {
-
+        
         SceneManager.LoadScene("Script Scene");
-
+        
     }
 
 
@@ -824,7 +824,14 @@ public class Clipboard : MonoBehaviour
         if (stagenum == 1)
 
         {
-            go_ScriptScene();
+            if (Sub1 == true) go_ScriptScene();
+            else
+            {
+                ScriptManager.count = 28;
+                ScriptManager.선택지count = 3;
+                ScriptManager.story = "sub2";
+                SceneManager.LoadScene("day Scene");
+            }
             스크립트flag = true;
         }
 
@@ -839,14 +846,26 @@ public class Clipboard : MonoBehaviour
             go_ScriptScene();
             스크립트flag = true;
         }
-        else if ((stagenum == 8) && (main1 == true))
+        else if ((stagenum == 8))
         {
-            go_ScriptScene();
+            if (main1 == true) go_ScriptScene();
+            else
+            {
+                ScriptManager.count = 400;
+                ScriptManager.선택지count = 400; //더이상 스토리 안나옴
+                SceneManager.LoadScene("day Scene");
+            }
             스크립트flag = true;
         }
-        else if ((stagenum == 11) && (main2 == true))
+        else if ((stagenum == 11))
         {
-            go_ScriptScene();
+            if (main2 == true) go_ScriptScene();
+            else
+            {
+                ScriptManager.count = 400;
+                ScriptManager.선택지count = 400; //더이상 스토리 안나옴
+                SceneManager.LoadScene("day Scene");
+            }
             스크립트flag = true;
             //시간석2 = false;
             //깬시간석2 = true;
@@ -957,7 +976,10 @@ public class Clipboard : MonoBehaviour
         stagenum++;
         if(스크립트flag == false)
         {  
-            SceneManager.LoadScene("day Scene");
+            
+                SceneManager.LoadScene("day Scene");
+            
+            
             Click.nextday = true;   // reloading없이 다음날
         }
         스크립트flag = false;

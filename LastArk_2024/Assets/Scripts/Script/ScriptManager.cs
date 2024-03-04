@@ -103,14 +103,14 @@ public class ScriptManager : MonoBehaviour
         //건너뛰기 (ex: sub2-1 >> sub3), 조건: sub2-1 마지막, count: sub3의 첫번째
         if (count == 0 && Clipboard.Sub1 != true)//1일차 "빛의 정체" 상소문 실패시 sub2로 건너뛰기
         {
-            count = 28;
-            선택지count = 3;
-            story = "sub2";
+            //count = 28;
+            //선택지count = 3;
+            //story = "sub2";
         }
         else if (count < 125 && count > 120 && Clipboard.main1 != true) //9일차 main1 false일시
         {
-            count = 400;
-            선택지count = 400; //더이상 스크립트 안나옴
+            //count = 400;
+            //선택지count = 400; //더이상 스크립트 안나옴
         }
         else if (count < 219 && count > 213 && Clipboard.main2 != true) //9일차 main2 false일시
         {
