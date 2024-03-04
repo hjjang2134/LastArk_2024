@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
 {
    
     public static float 현희망 = 50;
-    public static float 현식량 = 500;
+    public static float 현식량 = 700;
     public static float 현인구 = 30000;
     public static float 현침식도 = 40;
     
@@ -181,6 +181,12 @@ public class UI : MonoBehaviour
         {
             현침식도 -= 5;
         }
+
+        if (현침식도 <= 0)
+        {
+            현침식도 = 0;
+        }
+       
 
     }
 
