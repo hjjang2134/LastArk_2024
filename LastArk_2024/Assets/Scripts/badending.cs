@@ -27,9 +27,15 @@ public class endingimg : MonoBehaviour
 
     public TextMeshProUGUI goMainTxt; //안중요함
     public float speed = 1.0f;
+    public Image black;
+
 
     void Start()
     {
+        Color color = black.color;
+        color.a = 0.0f;
+        black.color = color;
+
         activeFalse();
         if(Clipboard.침식도엔딩 == true)
         {
@@ -66,6 +72,10 @@ public class endingimg : MonoBehaviour
     {
         if (count == 0)
         {
+            Color color = black.color;
+            color.a = 0.2f;
+            black.color = color;
+
             if (Clipboard.침식도엔딩 == true)
             {
                 대사.text = "당신은 몰려오는 어둠으로부터 도시를 지키지 못했습니다.";
@@ -86,6 +96,10 @@ public class endingimg : MonoBehaviour
 
         else if (count == 1)
         {
+            Color color = black.color;
+            color.a = 0.4f;
+            black.color = color;
+
             if (Clipboard.침식도엔딩 == true)
             {
                 대사.text = "세계의 마지막 빛은 꺼지고,";
@@ -105,6 +119,10 @@ public class endingimg : MonoBehaviour
         }
         else if (count == 2)
         {
+            Color color = black.color;
+            color.a = 0.6f;
+            black.color = color;
+
             if (Clipboard.침식도엔딩 == true)
             {
                 대사.text = "온 세계는 어둠으로 가득 차게 되었습니다.";
@@ -124,6 +142,10 @@ public class endingimg : MonoBehaviour
         }
         else if (count == 3)
         {
+            Color color = black.color;
+            color.a = 0.8f;
+            black.color = color;
+
             if (Clipboard.침식도엔딩 == true)
             {
                 대사.text = "당신과 주민들은 죽음만을 기다립니다.";
@@ -143,6 +165,10 @@ public class endingimg : MonoBehaviour
         }
         else if (count == 4)
         {
+            Color color = black.color;
+            color.a = 1f;
+            black.color = color;
+
             if (Clipboard.침식도엔딩 == true)
             {
                 대사.text = "Bad Ending 4. 어둠";

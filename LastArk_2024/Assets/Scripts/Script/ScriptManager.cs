@@ -81,7 +81,7 @@ public class ScriptManager : MonoBehaviour
         else //story열 값이 바뀐다면 
         {
             story = data_Dialog[count]["story"].ToString();
-            if((count == 324) || (count == 319)) //스토리 마지막임
+            if((count == 324) || (count == 319) || (count == 325) || (count == 320)) //스토리 마지막임
             {
                 if (gogoodendingok == true) SceneManager.LoadScene("GoodEnding");
                 else if (gorealendingok == true) SceneManager.LoadScene("RealEnding");
@@ -258,6 +258,7 @@ public class ScriptManager : MonoBehaviour
                 count = 320;
                 BtnAction();
                 gogoodendingok = true;
+                Debug.Log("gogoodendingok");
             });
             선택지bt2.onClick.RemoveAllListeners();
             선택지bt2.onClick.AddListener(() =>
@@ -265,6 +266,7 @@ public class ScriptManager : MonoBehaviour
                 story = "main4-2";
                 BtnAction();
                 gorealendingok = true;
+                Debug.Log("goREALendingok");
             });
             선택지bt3.onClick.RemoveAllListeners();
             선택지bt3.onClick.AddListener(() =>
@@ -273,6 +275,7 @@ public class ScriptManager : MonoBehaviour
                 count = 320;
                 BtnAction();
                 gogoodendingok = true;
+                Debug.Log("gogoodendingok");
             });
         }
         else
