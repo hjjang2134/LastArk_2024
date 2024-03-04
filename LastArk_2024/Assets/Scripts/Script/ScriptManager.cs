@@ -92,7 +92,11 @@ public class ScriptManager : MonoBehaviour
             {
                 count--;
                 scriptscene = false;
-                SceneManager.LoadScene("day Scene"); //원래 main
+                if (Clipboard.stagenum < 19)
+                {
+                    SceneManager.LoadScene("day Scene"); //원래 main
+                }
+                
             }
         }
 
