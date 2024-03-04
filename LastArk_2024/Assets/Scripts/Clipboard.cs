@@ -91,6 +91,7 @@ public class Clipboard : MonoBehaviour
     public static bool 침식도엔딩 = false;
     public static bool 인구엔딩 = false;
     public static bool 식량엔딩 = false;
+    public static bool 희망엔딩 = false;
     public static bool 스크립트flag = false; 
 
     
