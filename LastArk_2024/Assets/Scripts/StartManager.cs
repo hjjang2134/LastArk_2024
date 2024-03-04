@@ -16,7 +16,7 @@ public class StartManager : MonoBehaviour
     {
         if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Main Scene");
+            SceneManager.LoadScene("tutorial");
             Clipboard.리스트생성();
         }
     }

@@ -21,11 +21,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Script Scene.unity
     guid: a9d7e8b00ff646b4695453f812944319
   - enabled: 1
+    path: Assets/Scenes/day Scene.unity
+    guid: b60fec77711c42246afb6f9098e79f1f
+  - enabled: 1
     path: Assets/Scenes/RealEnding.unity
     guid: 8eba07888da8209469a7890c13f5faa1
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: d7de65675968a2a499932744c34dc7bc
+  - enabled: 1
+    path: Assets/YR/tutorial.unity
+    guid: cf8f00da013f4b245a4df09e53f01893
   - enabled: 1
     path: Assets/Scenes/GoodEnding.unity
     guid: cb7d67bb112deb645a4962498c21b6f7

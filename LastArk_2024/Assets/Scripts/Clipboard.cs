@@ -134,7 +134,7 @@ public class Clipboard : MonoBehaviour
     private void Start()
     {
 
-        정무마치기버튼.SetActive(true);
+        정무마치기버튼.SetActive(false); //false로 잠시 바꿈
         특별상소문표시.SetActive(false); //추가
         
 
@@ -835,14 +835,20 @@ public class Clipboard : MonoBehaviour
         else if ((stagenum == 11) && (main2 == true))
         {
             go_ScriptScene();
-            시간석2 = false;
-            깬시간석2 = true;
+            //시간석2 = false;
+            //깬시간석2 = true;
         }
         else if ((stagenum == 14) && (main3 == true))
         {
             go_ScriptScene();
-            시간석3 = false;
-            깬시간석3 = true;
+            시간석2 = true;
+            //시간석 = false;
+            //깬시간석3 = true;
+        }
+        else if ((stagenum == 15 )&&(시간석2 ==true))
+        {
+            깬시간석2 = true;
+            시간석2 = false; 
         }
        
         else if (stagenum == 18)
@@ -924,7 +930,9 @@ public class Clipboard : MonoBehaviour
     {
 
         스크립트진행함수();
+       
         stagenum++;
+        
         timecontroller.시간증가();
         UI.gagemechanism();
         상소문count = 0;
@@ -933,6 +941,7 @@ public class Clipboard : MonoBehaviour
         {
             print(dailySSM[i]);
         }
+      
 
         suc150 = false;
         fail150 = false;
@@ -964,15 +973,16 @@ public class Clipboard : MonoBehaviour
     {
         Invoke("버튼활성화", 3f);
         엔딩조건();
-        Debug.Log(B);
-        if (B==2)
+       
+        /* if (B==2)
         {
             특별상소문표시.SetActive(true);
-        }
+        } 
         else
         {
             특별상소문표시.SetActive(false);
-        }
+        } */
+        
     }
 
     public void 버튼활성화()
@@ -984,7 +994,7 @@ public class Clipboard : MonoBehaviour
         }
         else
         {
-            정무마치기버튼.SetActive(true);//원래 false였음
+            정무마치기버튼.SetActive(false);//원래 false였음
         }
     }
 }
