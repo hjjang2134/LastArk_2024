@@ -34,7 +34,7 @@ public class OpenPanel : MonoBehaviour
         {
             if (rockPanel.localPosition.x == 550)
             {
-                rockPanel.DOLocalMoveX(335, 2f).SetEase(Ease.OutBack);
+                rockPanel.DOLocalMoveX(335, 1f).SetEase(Ease.OutBack);
             }
             else if (rockPanel.localPosition.x == 335)
             {
@@ -46,11 +46,6 @@ public class OpenPanel : MonoBehaviour
         {
            stampPanel.DOLocalMoveX(323, 1f).SetEase(Ease.OutBack);
         }
-
-        /*else if (panelName == "Quit")
-        {
-            Panel.DOLocalMoveX(742, 2f).SetEase(Ease.InBack);
-        }*/
 
         else if (panelName == "Script")
         {
