@@ -995,10 +995,14 @@ public class Clipboard : MonoBehaviour
         Invoke("버튼활성화", 3f);
         엔딩조건();
        
-        if (B==2)
+        if (B==2 )
         {
             특별상소문표시.SetActive(true);
         } 
+        else if ( B==3)
+        {
+            특별상소문표시.SetActive(true);
+        }
         /*else
         {
             특별상소문표시.SetActive(false);
