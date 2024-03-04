@@ -9001,8 +9001,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d767cf9ef143f284fbe9e73f0cac86d8, type: 2}
-  m_sharedMaterial: {fileID: -7789387514144747295, guid: d767cf9ef143f284fbe9e73f0cac86d8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 952b5c285a2278241acb051eba291a54, type: 2}
+  m_sharedMaterial: {fileID: -578310825297416298, guid: 952b5c285a2278241acb051eba291a54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9093,8 +9093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.748548, y: -166.8}
-  m_SizeDelta: {x: 26.2269, y: 30}
+  m_AnchoredPosition: {x: -14.8157, y: -167.0719}
+  m_SizeDelta: {x: 27.8585, y: 29.4561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1472031968
 GameObject:
